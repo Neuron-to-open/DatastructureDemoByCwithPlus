@@ -3,8 +3,8 @@
 //
 
 #include <iostream>
-#include <cstdio>
 #include "Sequence.h"
+#include "SingleList.h"
 using namespace std ;
 
 
@@ -49,11 +49,26 @@ int main()
             }
             case 2: {
 
-                OpSeq() ;
-
+//                OpSeq() ; //测试顺序链表
+                SingleList singleList ;
+                singleList.InitList_L() ;
+                singleList.CreateList_R(6) ;
+                singleList.ListPrint() ;
+                if(singleList.DestroyList()){
+                    cout << "Having Deleting !!!" << endl ;
+                }
+                cout << "-----------" << endl ;
+                SingleList singleList1 ;
+                singleList1.InitList_L() ;
+                singleList1.CreateList_H(6) ;
+                singleList1.ListPrint() ;
+                if(singleList1.DestroyList()){
+                    cout << "Having Deleting !!!" << endl ;
+                }
                 break;
             }
             case 3:{
+
                 break ;
             }
             default:{
