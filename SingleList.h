@@ -26,5 +26,13 @@ public:
     void ListPrint() ;
 
     bool DestroyList() ;
+
+    bool GetElem_L(int i , int &data) ;
+
+    bool LocateElem_L( int key , int &loc ) ;
+
+    bool ListInsert_L(int i , int e) ;
+
+    bool ListDelete_L(int i , int data ) ;
 };
 #endif //ALL_SINGLELIST_H

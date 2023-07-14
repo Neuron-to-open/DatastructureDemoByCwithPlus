@@ -44,7 +44,14 @@ void SingleList::ListPrint() {
 
 bool SingleList::DestroyList() {
     if (this->linklist != nullptr){
-        free(this->linklist) ;
+
+        Node *tmp = this->linklist->next ;
+        Node *s = tmp->next ;
+        while (s != nullptr){
+            s = tmp->next ;
+            delete tmp ;
+            tmp = s ;
+        }
         return true ;
     }
 
@@ -67,4 +74,67 @@ void SingleList::CreateList_H(int n) {
     }
     cout << endl ;
 
+}
+
+bool SingleList::GetElem_L(int i, int &data) {
+    Node *tmp = this->linklist->next ;
+    int j = 1 ;
+    while ( j < i && tmp != nullptr){
+        tmp = tmp->next ;
+        j ++ ;
+    }
+    if(!tmp || j > i ){
+        return false ;
+    }
+    data = tmp->data ;
+    return true ;
+}
+
+bool SingleList::LocateElem_L(int key, int &loc ) {
+    Node * tmp = this->linklist->next ;
+    int length = 0 ;
+    while (tmp != nullptr && tmp->data != key){
+        tmp = tmp->next ;
+        length ++ ;
+    }
+
+    if (!tmp){
+        return false ;
+    }
+    loc = length ;
+    return true ;
+}
+
+bool SingleList::ListInsert_L(int i, int e) {
+    int j = 0 ;
+    Node *tmp = this->linklist ;
+    //找到第i-2个结点 举例为i= 3 则j = 1 就停止了即位置2
+    while (tmp != nullptr && j < i-2){
+        j ++ ;
+        tmp = tmp->next ;
+    }
+    if (tmp == nullptr || j > i -1 ){
+        return false ;
+    }
+    Node *s = new Node  ;
+    s->data = e ;
+    s->next = tmp->next ;
+    tmp->next = s ;
+    return true ;
+}
+
+bool SingleList::ListDelete_L(int i, int data) {
+    Node *tmp = this->linklist->next ;
+    int j = 0 ;
+    while (tmp != nullptr && j < i - 1 ){
+        tmp = tmp->next ;
+    }
+
+    if (tmp == nullptr || (j > i -1) ){
+        return false ;
+    }
+    Node *s = tmp->next ;
+    tmp->next = s->next ;
+    delete s ;
+    return true ;
 }

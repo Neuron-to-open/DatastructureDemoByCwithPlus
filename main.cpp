@@ -36,7 +36,7 @@ void OpSeq(){
 
 
 
-void SlL(){
+void OpSlL(){
     SingleList singleList ;
     singleList.InitList_L() ;
     singleList.CreateList_R(6) ;
@@ -49,10 +49,20 @@ void SlL(){
     singleList1.InitList_L() ;
     singleList1.CreateList_H(6) ;
     singleList1.ListPrint() ;
+    cout << "-----------" << endl ;
+    singleList1.ListInsert_L(2,56);
+    singleList1.ListPrint() ;
+    singleList1.ListInsert_L(6, 90) ;
+    singleList1.ListPrint() ;
+    singleList1.ListInsert_L(1,67) ;
+    singleList1.ListPrint() ;
+    cout << "-----------" << endl ;
     if(singleList1.DestroyList()){
         cout << "Having Deleting !!!" << endl ;
     }
 }
+
+
 int main()
 {
 
@@ -68,9 +78,23 @@ int main()
             }
             case 2: {
 
-//                OpSeq() ; //测试顺序链表
+                cout << "1~6 分别代表动态顺序链表，单链表，双向链表，循环单链表，循环单链表，静态链表" << endl ;
+                int num = -1 ;
+                cout << "Please input the number :" ;
+                cin >> num ;
+                switch (num) {
+                    case 1 :{
+                        OpSeq() ;
+                        break ;
+                    }
+                    case 2:{
+                        OpSlL() ;
+                        break;
+                    }
+                }
 
                 break;
+
             }
             case 3:{
 
