@@ -24,13 +24,11 @@ void SingleList::CreateList_R(int n) {
     while (num --){
         Node *s = new Node  ;
         data = rand()% 100 +1 ;
-        cout << data << " " ;
         s->data = data ;
         s->next = nullptr ;
         tmp->next = s ;
         tmp = s ;
     }
-    cout << endl ;
 }
 
 void SingleList::ListPrint() {

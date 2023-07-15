@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Sequence.h"
 #include "SingleList.h"
+#include "BST.h"
 using namespace std ;
 
 
@@ -34,8 +35,6 @@ void OpSeq(){
     }
 }
 
-
-
 void OpSlL(){
     SingleList singleList ;
     singleList.InitList_L() ;
@@ -62,6 +61,20 @@ void OpSlL(){
     }
 }
 
+void BST() {
+    bst bstTree ;
+    int n ;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    cout << "Enter the elements: ";
+    for (int i = 0; i < n; i++) {
+        int x;
+        cin >> x;
+        bstTree.root = bstTree.InsertNode(bstTree.root, x);
+    }
+    bstTree.InOrderTraversal() ;
+
+}
 
 int main()
 {
@@ -97,8 +110,24 @@ int main()
 
             }
             case 3:{
-
+                //栈与队列
                 break ;
+            }
+            case 4:{
+                //串
+                break ;
+            }
+            case 5:{
+                // 树
+                break;
+            }
+            case 6:{
+                //图
+                break ;
+            }
+            case 7:{
+                BST() ;
+                break;
             }
             default:{
                 break;
