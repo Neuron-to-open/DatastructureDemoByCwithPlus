@@ -6,6 +6,7 @@
 #include "Sequence.h"
 #include "SingleList.h"
 #include "BST.h"
+#include "sort.h"
 using namespace std ;
 
 
@@ -127,6 +128,19 @@ int main()
             }
             case 7:{
                 BST() ;
+                break;
+            }
+            case 8:{
+                cout << "Insertion Sort" << endl ;
+                cout << "Please ensure the length of the arr :" ;
+                int num = -1 ;
+                cin >> num ;
+                ElemType arr[num] ;
+                for (int i = 0 ; i < num ; ++ i){
+                    cin >> arr[i] ;
+                }
+                DirectInsertSort(arr , num) ;
+
                 break;
             }
             default:{

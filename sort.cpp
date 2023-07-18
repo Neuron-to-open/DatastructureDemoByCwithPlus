@@ -1,8 +1,9 @@
 //
 // Created by 24887 on 2023/7/18.
 //
-
+#include <iostream>
 #include "sort.h"
+using namespace std ;
 
 
 void DirectInsertSort(ElemType *arr, int n) {
@@ -17,5 +18,10 @@ void DirectInsertSort(ElemType *arr, int n) {
             j -- ;
         }
         arr[j+1] = key ;
+
+        for (int k = 0 ; k < n ; k ++){
+            cout << arr[k] << " " ;
+        }
+        cout << endl ;
     }
 }

@@ -79,12 +79,6 @@ build CMakeFiles/All.dir/AvlTree.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ 
   OBJECT_DIR = CMakeFiles\All.dir
   OBJECT_FILE_DIR = CMakeFiles\All.dir
 
-build CMakeFiles/All.dir/Sotring.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/Clion/All/Sotring.cpp || cmake_object_order_depends_target_All
-  DEP_FILE = CMakeFiles\All.dir\Sotring.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
-  OBJECT_DIR = CMakeFiles\All.dir
-  OBJECT_FILE_DIR = CMakeFiles\All.dir
-
 build CMakeFiles/All.dir/sort.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/Clion/All/sort.cpp || cmake_object_order_depends_target_All
   DEP_FILE = CMakeFiles\All.dir\sort.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++17
@@ -99,7 +93,7 @@ build CMakeFiles/All.dir/sort.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $
 #############################################
 # Link the executable All.exe
 
-build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/BST.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/Sotring.cpp.obj CMakeFiles/All.dir/sort.cpp.obj
+build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/BST.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/sort.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\All.dir

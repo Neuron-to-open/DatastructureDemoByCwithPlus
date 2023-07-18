@@ -4,6 +4,7 @@
 
 #ifndef ALL_SORT_H
 #define ALL_SORT_H
+typedef int ElemType ;
 /**
  *  Insertion Sort
  *      Direct Insertion Sort
