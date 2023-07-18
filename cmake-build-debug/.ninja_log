@@ -1,10 +1,7 @@
 # ninja log v5
-4	432	7110918315177501	CMakeFiles/All.dir/main.cpp.obj	5addd6a8b29517c3
-520	935	7110918320138358	All.exe	ac4b0562d6edaa2c
+4	495	7111106581779927	CMakeFiles/All.dir/main.cpp.obj	5addd6a8b29517c3
+599	988	7111106586599914	All.exe	1bcc6de3b4073541
 4	439	7110041765747479	CMakeFiles/All.dir/Sequence.cpp.obj	7d5f78ee1447c763
 5	626	7110915316762328	CMakeFiles/All.dir/SingleList.cpp.obj	6cec5431caf1882f
-24	520	7110918316067511	CMakeFiles/All.dir/BST.cpp.obj	9f47911d9b55d070
-46	203	7111106578869905	CMakeFiles/All.dir/AvlTree.cpp.obj	7459812d2d8a58a4
-4	495	7111106581779927	CMakeFiles/All.dir/main.cpp.obj	5addd6a8b29517c3
 26	598	7111106582669902	CMakeFiles/All.dir/BST.cpp.obj	9f47911d9b55d070
-599	988	7111106586599914	All.exe	1bcc6de3b4073541
+46	203	7111106578869905	CMakeFiles/All.dir/AvlTree.cpp.obj	7459812d2d8a58a4
