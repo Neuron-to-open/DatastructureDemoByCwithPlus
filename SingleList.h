@@ -19,9 +19,9 @@ public:
 
     bool InitList_L() ;
 
-    void CreateList_H(int n ) ;
+    void CreateList_H(int n ) ; //头插法
 
-    void CreateList_R(int n ) ;
+    void CreateList_R(int n ) ; //尾插法
 
     void ListPrint() ;
 

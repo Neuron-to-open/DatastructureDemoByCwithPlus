@@ -1,4 +1,4 @@
-# Install script for directory: D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/Clion/All
+# Install script for directory: D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/All
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/Clion/All/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/All/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

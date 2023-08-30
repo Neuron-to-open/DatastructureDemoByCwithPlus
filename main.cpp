@@ -11,15 +11,15 @@ using namespace std ;
 
 
 void OpSeq(){
-    Sequence sequence(10) ; // åˆ›å»ºä¸€ä¸ªsizeä¸º10é¡ºåºé“¾è¡¨çš„å®ä¾‹
-    sequence.InitTable() ;       //å®ä¾‹ä¸­åˆå§‹åŒ–é“¾è¡¨å„ç§æ•°æ®
-    sequence.ShowTable() ;       // éå†
+    Sequence sequence(10) ; // ´´½¨Ò»¸ösizeÎª10Ë³ĞòÁ´±íµÄÊµÀı
+    sequence.InitTable() ;       //ÊµÀıÖĞ³õÊ¼»¯Á´±í¸÷ÖÖÊı¾İ
+    sequence.ShowTable() ;       // ±éÀú
     cout << "-------------" << endl ;
     sequence.InsertTable(6, 99) ;
     sequence.InsertTable(1, 90) ;
     sequence.InsertTable(4 , 88) ;
     sequence.InsertTable(3 , 520) ;
-    sequence.ShowTable() ;       // éå†
+    sequence.ShowTable() ;       // ±éÀú
     cout << "-------------" << endl ;
 
     sequence.addLength() ;
@@ -29,7 +29,7 @@ void OpSeq(){
     int data ;
     sequence.DeleteTable(2 , data) ;
     cout << "Delete the data :" << data << endl ;
-    sequence.ShowTable() ;       // éå†
+    sequence.ShowTable() ;       // ±éÀú
     cout << "-------------" << endl ;
     if (sequence.DestroyTable()){
         cout << "Delete Success" << endl ;
@@ -92,7 +92,7 @@ int main()
             }
             case 2: {
 
-                cout << "1~6 åˆ†åˆ«ä»£è¡¨åŠ¨æ€é¡ºåºé“¾è¡¨ï¼Œå•é“¾è¡¨ï¼ŒåŒå‘é“¾è¡¨ï¼Œå¾ªç¯å•é“¾è¡¨ï¼Œå¾ªç¯å•é“¾è¡¨ï¼Œé™æ€é“¾è¡¨" << endl ;
+                cout << "1~6 ·Ö±ğ´ú±í¶¯Ì¬Ë³ĞòÁ´±í£¬µ¥Á´±í£¬Ë«ÏòÁ´±í£¬Ñ­»·µ¥Á´±í£¬Ñ­»·µ¥Á´±í£¬¾²Ì¬Á´±í" << endl ;
                 int num = -1 ;
                 cout << "Please input the number :" ;
                 cin >> num ;
@@ -111,19 +111,19 @@ int main()
 
             }
             case 3:{
-                //æ ˆä¸é˜Ÿåˆ—
+                //Õ»Óë¶ÓÁĞ
                 break ;
             }
             case 4:{
-                //ä¸²
+                //´®
                 break ;
             }
             case 5:{
-                // æ ‘
+                // Ê÷
                 break;
             }
             case 6:{
-                //å›¾
+                //Í¼
                 break ;
             }
             case 7:{

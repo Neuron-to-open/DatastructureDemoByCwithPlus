@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <iostream>
 using namespace std ;
+
+
 bool SingleList::InitList_L() {
     this->linklist = new Node  ;    //生成头结点
     if (this->linklist == nullptr){
@@ -41,19 +43,19 @@ void SingleList::ListPrint() {
 }
 
 bool SingleList::DestroyList() {
-    if (this->linklist != nullptr){
-
-        Node *tmp = this->linklist->next ;
+    if(this->linklist != nullptr){
+        Node *tmp = this->linklist ;
         Node *s = tmp->next ;
         while (s != nullptr){
-            s = tmp->next ;
-            delete tmp ;
-            tmp = s ;
+            tmp = s->next ;
+            delete s ;
+            s = tmp ;
         }
+        this->linklist->next = nullptr ;
         return true ;
+    }else {
+        return false ;
     }
-
-    return false ;
 }
 
 void SingleList::CreateList_H(int n) {
