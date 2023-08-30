@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <iostream>
 using namespace std ;
-
+// 有效的使用引用，可以避免单链表的断链
 
 bool SingleList::InitList_L() {
     this->linklist = new Node  ;    //生成头结点
