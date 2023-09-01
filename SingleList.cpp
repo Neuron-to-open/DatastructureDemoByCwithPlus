@@ -6,7 +6,12 @@
 #include <cstdlib>
 #include <iostream>
 using namespace std ;
-// 有效的使用引用，可以避免单链表的断链
+/*
+ * 有效的使用引用，可以避免单链表的断链
+ * 对于链表，如果更改原链表，那么就要使用指针的指针或者 对于指针的引用。
+ * 对于链表，但是如果只是更改链表的中间节点，那么只需要链表的指针就行
+ * 另外，通过new和malloc等函数，其实是用在堆区创建空间，赋予结构体一个合理的地址空间。
+*/
 
 bool SingleList::InitList_L() {
     this->linklist = new Node  ;    //生成头结点
