@@ -14,7 +14,7 @@ using namespace std ;
 */
 
 bool SingleList::InitList_L() {
-    this->linklist = new Node  ;    //生成头结点
+    //头指针赋予操作空间
     if (this->linklist == nullptr){
         return false ;
     }

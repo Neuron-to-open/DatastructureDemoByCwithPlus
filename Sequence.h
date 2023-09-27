@@ -16,7 +16,7 @@ class Sequence {
 public :
 
     Seq  seq ;
-    int a = 0 ;
+
     /**
      *空参构造函数
      **/

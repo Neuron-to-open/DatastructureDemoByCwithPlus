@@ -11,9 +11,6 @@ using namespace std ;
 
 
 
-
-
-
 Sequence::Sequence(int size) {
     this->seq.size = size ;
 }

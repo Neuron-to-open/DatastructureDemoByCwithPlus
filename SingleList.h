@@ -13,9 +13,8 @@ typedef struct Node{
 
 class SingleList{
 public:
-    Node *linklist ;    //链表
+    Node *linklist = new Node;    //链表头指针
     int length ;    //链表长度
-
 
     bool InitList_L() ;
 

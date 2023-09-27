@@ -5,13 +5,14 @@
 #include <iostream>
 #include "Sequence.h"
 #include "SingleList.h"
+#include "DoubleLinkedList.h"
 #include "BST.h"
 #include "sort.h"
 using namespace std ;
 
-
+//顺序表
 void OpSeq(){
-    Sequence sequence(10) ; // 创建一个size为10顺序链表的实例
+    Sequence sequence(10) ; // 创建一个size为10顺序表的实例
     sequence.InitTable() ;       //实例中初始化链表各种数据
     sequence.ShowTable() ;       // 遍历
     cout << "-------------" << endl ;
@@ -36,6 +37,8 @@ void OpSeq(){
     }
 }
 
+
+//单链表
 void OpSlL(){
     SingleList singleList ;
     singleList.InitList_L() ;
@@ -60,6 +63,25 @@ void OpSlL(){
     if(singleList1.DestroyList()){
         cout << "Having Deleting !!!" << endl ;
     }
+}
+
+
+//双链表
+void OpDll(){
+    DoubleLinkedList doubleLinkedList ;
+    if(doubleLinkedList.InitTDoubleList()){
+        cout << "Create a doublelinkedlist successfully" << endl ;
+    }
+
+    doubleLinkedList.CreateList_H(10) ;
+    doubleLinkedList.DisplayLink() ;
+
+    DoubleLinkedList doubleLinkedList1 ;
+    if(doubleLinkedList1.InitTDoubleList()){
+        cout <<"Create an another doubleLinkedList successfully" << endl ;
+    }
+    doubleLinkedList1.CreateList_T(10) ;
+    doubleLinkedList1.DisplayLink() ;
 }
 
 void BST() {
@@ -92,7 +114,7 @@ int main()
             }
             case 2: {
 
-                cout << "1~6 分别代表动态顺序链表，单链表，双向链表，循环单链表，循环单链表，静态链表" << endl ;
+                cout << "1~6 分别代表动态顺序链表，单链表，双向链表，循环单链表，循环双链表，静态链表" << endl ;
                 int num = -1 ;
                 cout << "Please input the number :" ;
                 cin >> num ;
@@ -104,6 +126,10 @@ int main()
                     case 2:{
                         OpSlL() ;
                         break;
+                    }
+                    case 3:{
+                        OpDll() ;
+                        break ;
                     }
                 }
 
