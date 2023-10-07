@@ -6,7 +6,7 @@
 using namespace std ;
 
 
-void DirectInsertSort(ElemType *arr, int n) {
+void DirectInsertSort(int *arr, int n) {
     int i ;
     int key ;
     int j ;

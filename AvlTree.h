@@ -5,12 +5,12 @@
 #ifndef ALL_AVLTREE_H
 #define ALL_AVLTREE_H
 
-typedef int ElemType ;
+typedef int ElemTypeAVL ;
 typedef struct AvlNode{
     struct AvlNode* left ;
     struct AvlNode* right ;
     int height ; //高度
-    ElemType keydata ;
+    ElemTypeAVL keydata ;
 }AvlNode;
 
 
@@ -30,7 +30,7 @@ public:
     AvlNode* leftRotate(AvlNode* x) ;
 
     AvlNode* newNode(int key) ;
-    AvlNode* InsertNode(AvlNode* node , ElemType key) ;
+    AvlNode* InsertNode(AvlNode* node , ElemTypeAVL key) ;
 };
 
 

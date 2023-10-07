@@ -4,7 +4,7 @@
 
 #ifndef ALL_SORT_H
 #define ALL_SORT_H
-typedef int ElemType ;
+
 /**
  *  Insertion Sort
  *      Direct Insertion Sort
@@ -19,5 +19,5 @@ typedef int ElemType ;
  *  Merge Sort
  *  Radix Sort
  * */
-void DirectInsertSort(ElemType arr[] , int n );
+void DirectInsertSort(int arr[] , int n );
 #endif //ALL_SORT_H

@@ -6,7 +6,7 @@
 #include "Sequence.h"
 #include "SingleList.h"
 #include "DoubleLinkedList.h"
-#include "BST.h"
+#include "Binarytreetraversal.h"
 #include "sort.h"
 using namespace std ;
 
@@ -84,27 +84,30 @@ void OpDll(){
     doubleLinkedList1.DisplayLink() ;
 }
 
-void BST() {
+
+//二叉树的遍历
+void BTT() {
     bst bstTree ;
     int n ;
-    cout << "Enter the number of elements: ";
-    cin >> n;
-    cout << "Enter the elements: ";
-    for (int i = 0; i < n; i++) {
-        int x;
-        cin >> x;
-        bstTree.root = bstTree.InsertNode(bstTree.root, x);
-    }
-    bstTree.InOrderTraversal() ;
-
+    ElemTypeBTT s[100] = {0};
+    cout << "Enter the PerOrder String ( '#' is on behalf of null ) :  ";
+    cin >> s ;
+    bstTree.root = bstTree.PerCreateTree(s) ;
+    bstTree.PerOrder(bstTree.root) ;
+    cout << endl ;
+    bstTree.PerFree(bstTree.root) ;
 }
+
+
+//线索二叉树
+
 
 int main()
 {
 
     cout << "The Function is created to show relevant basic operation in these chapters from Table to sorting !!!" <<endl ;
     int Chapter = -1 ;
-    cout << "Please input the number for the Chapter:" ;
+    cout << "Please input the number for the Chapter:(1:data 2:table 3:stack&queue 4:string 5:tree 6:graph 7:search 8:sorting)" ;
     cin >> Chapter ;
 
     while (Chapter != -1){
@@ -146,6 +149,7 @@ int main()
             }
             case 5:{
                 // 树
+                BTT() ;
                 break;
             }
             case 6:{

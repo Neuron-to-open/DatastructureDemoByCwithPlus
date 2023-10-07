@@ -67,8 +67,8 @@ build CMakeFiles/All.dir/SingleList.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTE
   OBJECT_DIR = CMakeFiles\All.dir
   OBJECT_FILE_DIR = CMakeFiles\All.dir
 
-build CMakeFiles/All.dir/BST.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/BST.cpp || cmake_object_order_depends_target_All
-  DEP_FILE = CMakeFiles\All.dir\BST.cpp.obj.d
+build CMakeFiles/All.dir/Binarytreetraversal.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/Binarytreetraversal.cpp || cmake_object_order_depends_target_All
+  DEP_FILE = CMakeFiles\All.dir\Binarytreetraversal.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++17
   OBJECT_DIR = CMakeFiles\All.dir
   OBJECT_FILE_DIR = CMakeFiles\All.dir
@@ -97,6 +97,18 @@ build CMakeFiles/All.dir/DoubleLinkedList.cpp.obj: CXX_COMPILER__All_Debug D$:/C
   OBJECT_DIR = CMakeFiles\All.dir
   OBJECT_FILE_DIR = CMakeFiles\All.dir
 
+build CMakeFiles/All.dir/CircleSingleList.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/CircleSingleList.cpp || cmake_object_order_depends_target_All
+  DEP_FILE = CMakeFiles\All.dir\CircleSingleList.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\All.dir
+  OBJECT_FILE_DIR = CMakeFiles\All.dir
+
+build CMakeFiles/All.dir/Cluebinarytree.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/Cluebinarytree.cpp || cmake_object_order_depends_target_All
+  DEP_FILE = CMakeFiles\All.dir\Cluebinarytree.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\All.dir
+  OBJECT_FILE_DIR = CMakeFiles\All.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target All
@@ -105,7 +117,7 @@ build CMakeFiles/All.dir/DoubleLinkedList.cpp.obj: CXX_COMPILER__All_Debug D$:/C
 #############################################
 # Link the executable All.exe
 
-build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/BST.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/sort.cpp.obj CMakeFiles/All.dir/SequenceStack.cpp.obj CMakeFiles/All.dir/DoubleLinkedList.cpp.obj
+build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/Binarytreetraversal.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/sort.cpp.obj CMakeFiles/All.dir/SequenceStack.cpp.obj CMakeFiles/All.dir/DoubleLinkedList.cpp.obj CMakeFiles/All.dir/CircleSingleList.cpp.obj CMakeFiles/All.dir/Cluebinarytree.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\All.dir

@@ -4,10 +4,10 @@
 
 #ifndef ALL_SINGLELIST_H
 #define ALL_SINGLELIST_H
-typedef int ElemType ;  //定义关键字类型别名
+typedef int ElemTypeSL ;  //定义关键字类型别名
 
 typedef struct Node{
-    ElemType data ;
+    ElemTypeSL data ;
     struct Node *next ;
 }Node;
 

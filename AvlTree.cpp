@@ -57,7 +57,7 @@ AvlNode *AvlTree::newNode(int key) {
 }
 
 
-AvlNode *AvlTree::InsertNode(AvlNode *node, ElemType key) {
+AvlNode *AvlTree::InsertNode(AvlNode *node, ElemTypeAVL key) {
     /*1 Perform the normal BST Insertion**/
     if( node == nullptr){
         return this->newNode(key) ;

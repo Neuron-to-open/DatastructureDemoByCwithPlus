@@ -1,0 +1,8 @@
+//
+// Created by 24887 on 2023/10/6.
+//
+
+#ifndef ALL_CLUEBINARYTREE_H
+#define ALL_CLUEBINARYTREE_H
+
+#endif //ALL_CLUEBINARYTREE_H

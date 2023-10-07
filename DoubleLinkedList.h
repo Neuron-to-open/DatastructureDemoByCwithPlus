@@ -5,9 +5,9 @@
 #ifndef ALL_DOUBLELINKEDLIST_H
 #define ALL_DOUBLELINKEDLIST_H
 
-typedef int ELemType ;
+typedef int ELemTypeDL ;
 typedef struct DNode{
-    ELemType data ;
+    ELemTypeDL data ;
     struct DNode *next , *prior ;
 }DNode;
 
