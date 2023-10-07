@@ -7,6 +7,7 @@
 #include "SingleList.h"
 #include "DoubleLinkedList.h"
 #include "Binarytreetraversal.h"
+#include "Cluebinarytree.h"
 #include "sort.h"
 using namespace std ;
 
@@ -85,7 +86,7 @@ void OpDll(){
 }
 
 
-//二叉树的遍历
+//二叉树的遍历:Per
 void BTT() {
     bst bstTree ;
     int n ;
@@ -100,14 +101,27 @@ void BTT() {
 
 
 //线索二叉树
+void ClueBT(){
+    cluebinarytree cbt1 ; //创建一个线索二叉树的实例1
+    cout << "Please input the PreOrder string " << endl ;
+    cbt1.root = cbt1.create_ThreadTree() ;
+    cbt1.PerOrder(cbt1.root) ;
+    cout << endl ;
 
+
+    cbt1.InThread(cbt1.root) ;
+    cbt1.InOrder(cbt1.root) ;
+    cbt1.RevInorder(cbt1.root) ;
+
+    cbt1.PerFree(cbt1.root) ;
+}
 
 int main()
 {
 
     cout << "The Function is created to show relevant basic operation in these chapters from Table to sorting !!!" <<endl ;
     int Chapter = -1 ;
-    cout << "Please input the number for the Chapter:(1:data 2:table 3:stack&queue 4:string 5:tree 6:graph 7:search 8:sorting)" ;
+    cout << "Please input the number for the Chapter(1:data 2:table 3:stack&queue 4:string 5:tree 6:graph 7:search 8:sorting):" ;
     cin >> Chapter ;
 
     while (Chapter != -1){
@@ -149,7 +163,7 @@ int main()
             }
             case 5:{
                 // 树
-                BTT() ;
+                ClueBT() ;
                 break;
             }
             case 6:{
@@ -157,7 +171,7 @@ int main()
                 break ;
             }
             case 7:{
-                BST() ;
+                BTT() ;
                 break;
             }
             case 8:{
