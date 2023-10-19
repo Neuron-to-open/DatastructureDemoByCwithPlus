@@ -74,6 +74,15 @@ void cluebinarytree::InThread(ThreadNode *T) {
     }
 }
 
+
+ThreadNode *cluebinarytree::FirstNode(ThreadNode *T) {
+    while (T->ltag == 0){
+        T = T-> l ;
+    }
+
+    return T ;
+}
+
 ThreadNode *cluebinarytree::NextNode(ThreadNode *p) {
     if(p->rtag == 0){
         return FirstNode(p->r) ;
@@ -110,3 +119,5 @@ void cluebinarytree::RevInorder(ThreadNode *T) {
     }
     cout << endl ;
 }
+
+

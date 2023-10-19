@@ -36,6 +36,23 @@ void bst::PerOrder(bttNode * T) {
     }
 }
 
+void bst::InOrder(bttNode *T) {
+    if(T != nullptr){
+        InOrder(T->left) ;
+        cout << T->data << " " ;
+        InOrder(T->right) ;
+    }
+}
+
+void bst::ReOrder(bttNode *T) {
+    if(T != nullptr ){
+        ReOrder(T->left) ;
+        ReOrder(T->right) ;
+        cout << T->data << " " ;
+    }
+}
+
+
 bttNode *bst::PerFree(bttNode *T) {
     if ( T ){
         PerFree(T->left) ;
@@ -46,3 +63,5 @@ bttNode *bst::PerFree(bttNode *T) {
 
     return T ;
 }
+
+

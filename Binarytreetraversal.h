@@ -24,7 +24,11 @@ public:
 
     bttNode* PerCreateTree(ElemTypeBTT s[]) ; // 先序递归建立二叉树
 
-    void PerOrder(bttNode* T) ;
+    void PerOrder(bttNode* T) ; //先序遍历
+
+    void InOrder(bttNode* T) ; //中序遍历
+
+    void ReOrder(bttNode* T) ; //后序遍历
 
     bttNode* PerFree(bttNode* T) ;
 };
