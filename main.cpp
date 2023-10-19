@@ -10,6 +10,7 @@
 #include "StackAndQueue.h"
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
+#include "Huffman.h"
 #include "sort.h"
 
 #include <iostream>
@@ -204,6 +205,10 @@ void BTT() {
     bstTree.root = bstTree.PerCreateTree(s) ;
     bstTree.PerOrder(bstTree.root) ;
     cout << endl ;
+    bstTree.InOrder(bstTree.root) ;
+    cout << endl ;
+    bstTree.ReOrder(bstTree.root) ;
+    cout << endl ;
     bstTree.PerFree(bstTree.root) ;
 }
 
@@ -307,12 +312,20 @@ int main()
             }
             case 5:{
                 //二叉树的遍历
-                cout << "二叉树的遍历" << endl ;
-                BTT() ;
-                cout << "线索二叉树" << endl ;
-                // 中序线索二叉树
-                ClueBT() ;
+//                cout << "二叉树的遍历" << endl ;
+//                BTT() ;
+//                cout << "线索二叉树" << endl ;
+//                // 中序线索二叉树
+//                ClueBT() ;
                 //哈夫曼树
+                cout << "Please input the number " << endl ;
+                int nums[10] = {0};
+                for (int i = 0 ; i < 10 ; i ++){
+                    cin >> nums[i] ;
+                }
+
+                Huffman huffman ;
+                huffman.CreateHuffmanTree(huffman.HT , 10 , nums) ;
 
                 break;
             }
