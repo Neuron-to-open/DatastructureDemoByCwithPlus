@@ -22,28 +22,28 @@ void Graph2::InitAMGraph(AMGraph &G) {
 
     G.numVertexs = 0 ;
     G.numedges = 0 ;
-    cout << "å·²ç»åˆå§‹åŒ–é‚»æŽ¥çŸ©é˜µï¼\n" << endl ;
+    cout << "ÒÑ¾­³õÊ¼»¯ÁÚ½Ó¾ØÕó!" << endl ;
 }
 
 void Graph2::CreateAMGrpah(AMGraph &G) {
-    cout << "è¯·è¾“å…¥é¡¶ç‚¹æ•°å’Œè¾¹æ•°" << endl ;
+    cout << "ÇëÊäÈë¶¥µãÊýºÍ±ßÊý" << endl ;
     cin >> G.numVertexs >> G.numedges ;
     int i , j , k , weight ;
 
     for (i = 0 ; i < G.numVertexs ; i ++){
         fflush(stdin) ;
-        printf("è¯·è¾“å…¥ç¬¬%dä¸ªé¡¶ç‚¹æ•°æ®:", i + 1);
+        printf("ÇëÊäÈëµÚ%d¸ö¶¥µãÊý¾Ý:", i + 1);
         cin >> G.vertexs[i] ;
     }
 
     for (k = 0 ; k < G.numedges ; k ++){
-        printf("è¯·è¾“å…¥ç¬¬%dæ¡è¾¹çš„ä¸¤é¡¶ç‚¹åŠå…¶æƒå€¼:", k + 1);
+        printf("ÇëÊäÈëµÚ%dÌõ±ßµÄÁ½¶¥µã¼°ÆäÈ¨Öµ:", k + 1);
         cin >> i >> j >> weight ;
         G.edges[i-1][j-1] = weight ;
         G.edges[j-1][i-1] = weight ;
     }
 
-    cout << "å·²å®Œæˆé‚»æŽ¥çŸ©é˜µçš„åˆ›å»º" << endl ;
+    cout << "ÒÑÍê³ÉÁÚ½Ó¾ØÕóµÄ´´½¨" << endl ;
 }
 
 void Graph2::DisplayAMGraph(AMGraph G) {
@@ -58,7 +58,7 @@ void Graph2::DisplayAMGraph(AMGraph G) {
         cout << G.vertexs[i] << "\t";
         for (j = 0 ; j < G.numVertexs ; j ++){
             if(G.edges[i][j] == INF){
-                cout << "âˆž\t" ;
+                cout << "¡Þ\t" ;
             }else {
                 cout << G.edges[i][j] << "\t" ;
             }

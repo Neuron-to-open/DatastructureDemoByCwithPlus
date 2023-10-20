@@ -12,6 +12,7 @@
 #include "Cluebinarytree.h"
 #include "Huffman.h"
 #include "AdjacencyMartixGraph.h"
+#include "AdjacencyListGraph.h"
 #include "Adjacencymultiplicity.h"
 #include "sort.h"
 
@@ -334,10 +335,15 @@ int main()
             case 6:{
 
                 //邻接矩阵
-                Graph2 graph2 ;
-                graph2.InitAMGraph(graph2.amGraph) ;
-                graph2.CreateAMGrpah(graph2.amGraph) ;
-                graph2.DisplayAMGraph(graph2.amGraph) ;
+//                Graph2 graph2 ;
+//                graph2.InitAMGraph(graph2.amGraph) ;
+//                graph2.CreateAMGrpah(graph2.amGraph) ;
+//                graph2.DisplayAMGraph(graph2.amGraph) ;
+                //邻接表
+                Graph3 graph3 ;
+                graph3.InitALGraph(graph3.alGraph) ;
+                graph3.CreateALGrapg(graph3.alGraph) ;
+                graph3.DisplayALGraph(graph3.alGraph) ;
                 //邻接多重表
 //                Graph graph ;
 //                graph.InitAMLGraph(graph.G) ;
