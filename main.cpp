@@ -14,6 +14,7 @@
 #include "AdjacencyMartixGraph.h"
 #include "AdjacencyListGraph.h"
 #include "Adjacencymultiplicity.h"
+#include "OrthogonallistGraph.h"
 #include "sort.h"
 
 #include <iostream>
@@ -340,15 +341,20 @@ int main()
 //                graph2.CreateAMGrpah(graph2.amGraph) ;
 //                graph2.DisplayAMGraph(graph2.amGraph) ;
                 //邻接表
-                Graph3 graph3 ;
-                graph3.InitALGraph(graph3.alGraph) ;
-                graph3.CreateALGrapg(graph3.alGraph) ;
-                graph3.DisplayALGraph(graph3.alGraph) ;
+//                Graph3 graph3 ;
+//                graph3.InitALGraph(graph3.alGraph) ;
+//                graph3.CreateALGrapg(graph3.alGraph) ;
+//                graph3.DisplayALGraph(graph3.alGraph) ;
                 //邻接多重表
 //                Graph graph ;
 //                graph.InitAMLGraph(graph.G) ;
 //                graph.CreateAMLGraph(graph.G) ;
 //                graph.DisplayAMLGraph(graph.G) ;
+                //十字链表
+                Graph4 graph4 ;
+                graph4.InitOLGrpah(graph4.olGraph) ;
+                graph4.CreateOLGraph(graph4.olGraph) ;
+                graph4.DisplayOLGraph(graph4.olGraph) ;
                 break ;
             }
             case 7:{

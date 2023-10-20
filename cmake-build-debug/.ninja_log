@@ -1,10 +1,10 @@
 # ninja log v5
-4	509	7194883201221242	CMakeFiles/All.dir/main.cpp.obj	7cd9becb42adbc97
+5	841	7194910474345517	CMakeFiles/All.dir/main.cpp.obj	7cd9becb42adbc97
 4	1286	7174776166975538	CMakeFiles/All.dir/Sequence.cpp.obj	1b6bdcc0c36f1624
-386	747	7194884178868700	All.exe	7e40fdf799e5ddb2
+380	739	7194910650719776	All.exe	30fb7109fec4ec50
 5	433	7182942921228047	CMakeFiles/All.dir/BST.cpp.obj	7648740818cc1464
 56	1190	7182941750023222	CMakeFiles/All.dir/SingleList.cpp.obj	59a8ca63827bbbe
-1	400	7194892704107757	build.ninja	35ee646d694f13e6
+1	400	7194989797384412	build.ninja	35ee646d694f13e6
 57	648	7183443697755186	CMakeFiles/All.dir/sort.cpp.obj	14504e26ae88d5be
 79	501	7183443696280914	CMakeFiles/All.dir/AvlTree.cpp.obj	5d954aea046b3b52
 140	1189	7182941750023222	CMakeFiles/All.dir/DoubleLinkedList.cpp.obj	8a2abbaf4658a8a5
@@ -17,11 +17,10 @@
 7	493	7193879836883721	CMakeFiles/All.dir/StackAndQueue.cpp.obj	a982f1ec934f412b
 43	748	7194260712446854	CMakeFiles/All.dir/Huffman.cpp.obj	da69aeb872694302
 5	430	7194869413962273	CMakeFiles/All.dir/Adjacencymultiplicity.cpp.obj	474258b7d8c6bcf7
-23	408	7194909132694984	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	fc287002bebaefad
-22	417	7194909674597376	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	fc287002bebaefad
-22	430	7194910050905860	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	fc287002bebaefad
-24	606	7194910472289691	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	fc287002bebaefad
-5	841	7194910474345517	CMakeFiles/All.dir/main.cpp.obj	7cd9becb42adbc97
-841	1322	7194910480643088	All.exe	30fb7109fec4ec50
 4	379	7194910647209772	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	fc287002bebaefad
-380	739	7194910650719776	All.exe	30fb7109fec4ec50
+25	451	7195008284117870	CMakeFiles/All.dir/OrthogonallistGraph.cpp.obj	85ac279851e6be8d
+5	534	7195008474502777	CMakeFiles/All.dir/main.cpp.obj	7cd9becb42adbc97
+4	434	7195008599530775	CMakeFiles/All.dir/OrthogonallistGraph.cpp.obj	85ac279851e6be8d
+435	985	7195008604953395	All.exe	7f6324583ce0f366
+5	392	7195008729734853	CMakeFiles/All.dir/OrthogonallistGraph.cpp.obj	85ac279851e6be8d
+393	781	7195008733545859	All.exe	7f6324583ce0f366
