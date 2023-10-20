@@ -121,6 +121,18 @@ build CMakeFiles/All.dir/Huffman.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ 
   OBJECT_DIR = CMakeFiles\All.dir
   OBJECT_FILE_DIR = CMakeFiles\All.dir
 
+build CMakeFiles/All.dir/Adjacencymultiplicity.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/Adjacencymultiplicity.cpp || cmake_object_order_depends_target_All
+  DEP_FILE = CMakeFiles\All.dir\Adjacencymultiplicity.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\All.dir
+  OBJECT_FILE_DIR = CMakeFiles\All.dir
+
+build CMakeFiles/All.dir/AdjacencyMartixGraph.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ $ $ SCIENCE/DatastructAndAlgorithm/data$ structure$ and$ algorithm_C++/All/AdjacencyMartixGraph.cpp || cmake_object_order_depends_target_All
+  DEP_FILE = CMakeFiles\All.dir\AdjacencyMartixGraph.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++17
+  OBJECT_DIR = CMakeFiles\All.dir
+  OBJECT_FILE_DIR = CMakeFiles\All.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target All
@@ -129,7 +141,7 @@ build CMakeFiles/All.dir/Huffman.cpp.obj: CXX_COMPILER__All_Debug D$:/COMPUTER$ 
 #############################################
 # Link the executable All.exe
 
-build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/Binarytreetraversal.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/sort.cpp.obj CMakeFiles/All.dir/SequenceStack.cpp.obj CMakeFiles/All.dir/DoubleLinkedList.cpp.obj CMakeFiles/All.dir/CircleSingleList.cpp.obj CMakeFiles/All.dir/Cluebinarytree.cpp.obj CMakeFiles/All.dir/StackAndQueue.cpp.obj CMakeFiles/All.dir/Huffman.cpp.obj
+build All.exe: CXX_EXECUTABLE_LINKER__All_Debug CMakeFiles/All.dir/Sequence.cpp.obj CMakeFiles/All.dir/main.cpp.obj CMakeFiles/All.dir/SingleList.cpp.obj CMakeFiles/All.dir/Binarytreetraversal.cpp.obj CMakeFiles/All.dir/AvlTree.cpp.obj CMakeFiles/All.dir/sort.cpp.obj CMakeFiles/All.dir/SequenceStack.cpp.obj CMakeFiles/All.dir/DoubleLinkedList.cpp.obj CMakeFiles/All.dir/CircleSingleList.cpp.obj CMakeFiles/All.dir/Cluebinarytree.cpp.obj CMakeFiles/All.dir/StackAndQueue.cpp.obj CMakeFiles/All.dir/Huffman.cpp.obj CMakeFiles/All.dir/Adjacencymultiplicity.cpp.obj CMakeFiles/All.dir/AdjacencyMartixGraph.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\All.dir

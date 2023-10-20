@@ -11,6 +11,8 @@
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
 #include "Huffman.h"
+#include "AdjacencyMartixGraph.h"
+#include "Adjacencymultiplicity.h"
 #include "sort.h"
 
 #include <iostream>
@@ -146,7 +148,7 @@ int getpriority(char c){
 }
 
 
-//s1是操作数栈 s2是符号栈
+//s1操作数栈 s2是符号栈
 void convert(string& express, stack<char>& s1, stack<char>& s2)
 {
     int i = 0;
@@ -166,7 +168,7 @@ void convert(string& express, stack<char>& s1, stack<char>& s2)
             {
                 s2.push(express[i++]);
             }
-            else//反之优先级如果是小于等于的话，那么就要把运算符出栈然后入S1
+            else//反之优先级如果是小于等于的话，那么就要把运算符出栈然后入s1
             {
                 char temp = s2.top();
                 s2.pop();
@@ -186,7 +188,7 @@ void convert(string& express, stack<char>& s1, stack<char>& s2)
             i++;//不要忘记后移
         }
     }
-    while (!(s2.empty()))//如果S2没有空，那么依次出S2，入S1
+    while (!(s2.empty()))//如果s2没有空，那么依次出s2，入s1
     {
         char temp = s2.top();
         s2.pop();
@@ -215,7 +217,7 @@ void BTT() {
 
 //线索二叉树
 void ClueBT(){
-    cluebinarytree cbt1 ; //创建一个线索二叉树的实例1
+    cluebinarytree cbt1 ; //创建一个二叉树的实例1
     cout << "Please input the PreOrder string " << endl ;
     cbt1.root = cbt1.create_ThreadTree() ;
     cbt1.PerOrder(cbt1.root) ;
@@ -288,9 +290,9 @@ int main()
                 stack<char> result;//输出用
 
                 string expression("(a+b)*c+d-(e+g)*h");
-                cout << "转换前为中缀式：" << expression << endl;
+                cout << "转换前为中缀式" << expression << endl;
                 convert(expression, s1, s2);
-                cout << "转换为后缀式：";
+                cout << "转换为后缀式";
 
                 while (!(s1.empty()))
                 {
@@ -330,7 +332,17 @@ int main()
                 break;
             }
             case 6:{
-                //图
+
+                //邻接矩阵
+                Graph2 graph2 ;
+                graph2.InitAMGraph(graph2.amGraph) ;
+                graph2.CreateAMGrpah(graph2.amGraph) ;
+                graph2.DisplayAMGraph(graph2.amGraph) ;
+                //邻接多重表
+//                Graph graph ;
+//                graph.InitAMLGraph(graph.G) ;
+//                graph.CreateAMLGraph(graph.G) ;
+//                graph.DisplayAMLGraph(graph.G) ;
                 break ;
             }
             case 7:{
