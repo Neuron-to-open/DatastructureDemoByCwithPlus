@@ -362,16 +362,23 @@ int main()
                 break;
             }
             case 8:{
-                cout << "Insertion Sort" << endl ;
-                cout << "Please ensure the length of the arr :" ;
-                int num = -1 ;
-                cin >> num ;
-                ElemType arr[num] ;
-                for (int i = 0 ; i < num ; ++ i){
-                    cin >> arr[i] ;
-                }
-                DirectInsertSort(arr , num) ;
-
+//                cout << "Insertion Sort" << endl ;
+////                cout << "Please ensure the length of the arr :" ;
+////                int num = -1 ;
+////                cin >> num ;
+////                ElemType arr[num] ;
+////                for (int i = 0 ; i < num ; ++ i){
+////                    cin >> arr[i] ;
+////                }
+////                DirectInsertSort(arr , num) ;
+                cout << "HalfInsertSotr" << endl ;
+                int arr[] = {578,432,1325,384,5432,651,3817,564,387,5} ;
+                int size = sizeof (arr) / sizeof(arr[0]) ;
+                cout << "Before Sorting : " << endl ;
+                PrintArr(arr , size) ;
+                HalfInsertSort(arr ,size) ;
+                cout << endl << "After Sorting :" << endl ;
+                PrintArr(arr , size) ;
                 break;
             }
             default:{

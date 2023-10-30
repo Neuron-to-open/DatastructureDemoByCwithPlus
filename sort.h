@@ -19,5 +19,11 @@
  *  Merge Sort
  *  Radix Sort
  * */
-void DirectInsertSort(int arr[] , int n );
+
+
+void PrintArr(int arr[] , int size ) ; //´òÓ¡Êý×é
+
+void DirectInsertSort(int arr[] , int n );   // Direct Insertion Sort
+
+void HalfInsertSort(int arr[] , int size ) ;
 #endif //ALL_SORT_H
