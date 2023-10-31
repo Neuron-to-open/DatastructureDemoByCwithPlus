@@ -80,3 +80,107 @@ void HalfInsertSort(int arr[] , int size ){
     }
 }
 
+
+void BubbleSort(int arr[] , int size ){
+    int i , j , count = 0 , round = 0 ,temp  ;
+    for(i = 0 ; i < size - 1 ; i ++){
+        for (j = 0 ; j < size - i -  1 ; j ++){
+            //每一趟挑选最大的.
+            if (arr[j] > arr[j+1]){
+                temp = arr[j] ;
+                arr[j] = arr[j+1] ;
+                arr[j+1] = temp ;
+            }
+            count ++ ;
+        }
+        round ++ ;
+    }
+
+    PrintArr(arr , size) ;
+    cout << "\t排序总次数" << round << ",比较总次数:" << count << endl ;
+    return ;
+}
+
+
+// 快速排序
+int GetMinIndex(int *arr , int left , int right){
+    int mid = (left + right) / 2;
+
+    if (arr[left] < arr[right])
+    {
+        if (arr[mid] < arr[left])
+        {
+            return left;
+        }
+        else if (arr[mid] <arr[right])
+        {
+            return mid;
+        }
+        else
+        {
+            return right;
+        }
+    }
+    else
+    {
+        if (arr[mid] < arr[right])
+        {
+            return right;
+        }
+        else if (arr[mid] < arr[left])
+        {
+            return mid;
+        }
+        else
+        {
+            return left;
+        }
+    }
+}
+
+
+void Swap(int &a , int &b){
+    int temp = a ;
+    a = b ;
+    b = temp ;
+}
+
+
+int PartSort(int *arr , int left , int right){
+    int key = GetMinIndex(arr, left , right) ;
+    Swap(arr[key] , arr[left]) ;
+
+    key = arr[left] ;
+
+    int hole = left ;
+
+    while (left < right)
+    {
+        while (left < right && arr[right] >= key)
+        {
+            right--;
+        }
+        arr[hole] = arr[right];
+        hole = right;
+
+        while (left < right && arr[left] <= key)
+        {
+            left++;
+        }
+        arr[hole] = arr[left];
+        hole = left;
+    }
+
+    arr[hole] = key;
+    return hole;
+}
+
+
+void QuickSort(int *arr , int begin , int end ){
+    if (begin >= end){
+        return ;
+    }
+    int key = PartSort(arr , begin , end) ;
+    QuickSort(arr, begin , key -1) ;
+    QuickSort(arr, key + 1 , end) ;
+}

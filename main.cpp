@@ -371,7 +371,7 @@ int main()
 ////                    cin >> arr[i] ;
 ////                }
 ////                DirectInsertSort(arr , num) ;
-                cout << "HalfInsertSotr" << endl ;
+                cout << "HalfInsertSort" << endl ;
                 int arr[] = {578,432,1325,384,5432,651,3817,564,387,5} ;
                 int size = sizeof (arr) / sizeof(arr[0]) ;
                 cout << "Before Sorting : " << endl ;
@@ -379,6 +379,17 @@ int main()
                 HalfInsertSort(arr ,size) ;
                 cout << endl << "After Sorting :" << endl ;
                 PrintArr(arr , size) ;
+
+                cout << "BubbleSort:" << endl ;
+                int arr1[] = {5, 243, 42, 123, 55, 56, 32, 23, 78, 324};
+                int size1 = sizeof (arr1) / sizeof(arr1[0]) ;
+                BubbleSort(arr1 , size1) ;
+
+                cout << "QuickSort:" << endl ;
+                int arr2[] = {5, 243, 42, 123, 55, 56, 32, 23, 78, 324};
+                int size2 = sizeof (arr2) / sizeof(arr2[0]) ;
+                QuickSort(arr2, 0 , size2-1) ;
+                PrintArr(arr2 , size2) ;
                 break;
             }
             default:{
