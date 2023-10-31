@@ -390,6 +390,24 @@ int main()
                 int size2 = sizeof (arr2) / sizeof(arr2[0]) ;
                 QuickSort(arr2, 0 , size2-1) ;
                 PrintArr(arr2 , size2) ;
+
+
+                cout << "HeapSort:" << endl ;
+                int arr3[] = {8, 4, 3, 1, 6, 9, 5, 7, 2, 0};
+                int size3 = sizeof (arr3) / sizeof(arr2[3]) ;
+                DisplayHeapSort(arr3, size3) ;
+                CreateHeap(arr3, size3)  ;
+                DisplayHeapSort(arr3 ,size3) ;
+
+                cout <<"MergeSort:" << endl ;
+                int a[4] = {0,2,4,6} ;
+                int b[6] = {1,3,5,7,8,9};
+                int *c = new int[4+6] ;
+                MergeSort(a, b, c, 4, 6) ;
+
+                cout << "RadixSort" << endl ;
+                int arr4[9] = { 52, 200, 4, 1034, 17, 3319, 8324, 33112, 603 };
+                RadixSort(arr4, 9) ;
                 break;
             }
             default:{

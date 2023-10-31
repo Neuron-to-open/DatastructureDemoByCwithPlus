@@ -7,14 +7,14 @@
 
 /**
  *  Insertion Sort
- *      Direct Insertion Sort
- *      Half Insertion Sort
+ *      Direct Insertion Sort ¡Ì
+ *      Half Insertion Sort ¡Ì
  *      shell Sort
  *  Swap Sort
- *      bubble Sort
- *      Quick Sort
+ *      bubble Sort ¡Ì
+ *      Quick Sort ¡Ì
  *  Select Sort
- *      Easy selection Sort
+ *      Easy selection Sort ¡Ì
  *      Heap Sort
  *  Merge Sort
  *  Radix Sort
@@ -39,5 +39,20 @@ int PartSort(int *arr , int left , int right) ;
 
 void QuickSort(int *arr , int begin , int end ) ;
 
-void DirectSelectSort(int *arr , int size) ;
+void SimpleSelectSort(int *arr , int size) ;
+
+void Heapify(int *arr , int k , int len) ;
+
+void CreateHeap(int *arr , int len) ;
+
+void HeapSort(int *arr , int len) ;
+
+void DisplayHeapSort(int *arr , int len) ;
+
+void MergeSort(int *a , int *b , int *c , int la ,int lb) ;
+
+int GetDigit(int M , int i ) ;
+
+void RadixSort(int *arr , int len) ;
+
 #endif //ALL_SORT_H
