@@ -1,0 +1,3 @@
+D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/All/cmake-build-debug-mingw/CMakeFiles/All.dir
+D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/All/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+D:/COMPUTER   SCIENCE/DatastructAndAlgorithm/data structure and algorithm_C++/All/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

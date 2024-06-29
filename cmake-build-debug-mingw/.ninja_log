@@ -1,0 +1,18 @@
+# ninja log v5
+247	1388	7328655252071126	CMakeFiles/All.dir/SequenceStack.cpp.obj	b1c8842802fe1696
+139	1427	7328655252146147	CMakeFiles/All.dir/AvlTree.cpp.obj	7bc7850229102c04
+317	1867	7328655256867094	CMakeFiles/All.dir/StackAndQueue.cpp.obj	1b415c919b1548fd
+272	1877	7328655256953966	CMakeFiles/All.dir/Cluebinarytree.cpp.obj	b150d8e00a1aebf0
+1	1883	7328655257019005	CMakeFiles/All.dir/Sequence.cpp.obj	ec5945c7ce7cfb9b
+363	1896	7328655257158437	CMakeFiles/All.dir/AdjacencyListGraph.cpp.obj	7250b3332fa01e46
+119	1903	7328655257223711	CMakeFiles/All.dir/Binarytreetraversal.cpp.obj	d65cf51496289c16
+340	1915	7328655257346794	CMakeFiles/All.dir/Adjacencymultiplicity.cpp.obj	40d7be4e6bd2053e
+387	1927	7328655257476061	CMakeFiles/All.dir/AdjacencyMartixGraph.cpp.obj	462a9f3a54107f06
+197	1939	7328655257598264	CMakeFiles/All.dir/DoubleLinkedList.cpp.obj	ffb0d30bef38fc89
+178	1940	7328655257613307	CMakeFiles/All.dir/SingleList.cpp.obj	b6dfc887302c80a3
+296	1957	7328655257802448	CMakeFiles/All.dir/CircleSingleList.cpp.obj	9d32f1e00b697ca5
+221	1963	7328655257863427	CMakeFiles/All.dir/sort.cpp.obj	156af2a3188d3e86
+158	2034	7328655258563957	CMakeFiles/All.dir/main.cpp.obj	e9771c720adcd47c
+1390	2100	7328655259221912	CMakeFiles/All.dir/Huffman.cpp.obj	82252427ef79eb7e
+1428	2128	7328655259517756	CMakeFiles/All.dir/OrthogonallistGraph.cpp.obj	580183f148766261
+2128	2721	7328655265376539	All.exe	7f6324583ce0f366
