@@ -6,10 +6,10 @@
 #define ALL_SEQUENCE_H
 
 /* 定义元素类型为整型 */
-typedef int SequenceDataElement ;
+typedef int SequenceListDataElement ;
 /* 定义顺序表结构 */
 typedef struct {
-    SequenceDataElement *head ; /* 指向数组首元素的指针 */
+    SequenceListDataElement *head ; /* 指向数组首元素的指针 */
     int size ; /* 数组的预分配大小 */
     int length ; /* 数组中元素的实际数量 */
 }Seq;

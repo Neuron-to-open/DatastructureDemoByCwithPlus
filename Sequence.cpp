@@ -18,7 +18,7 @@ Sequence::Sequence(int size) {
 // 初始化表，设定初始长度为6，并随机填充元素
 void Sequence::InitTable() {
     this->seq.length = 6;
-    this->seq.head = (SequenceDataElement *) malloc(sizeof(SequenceDataElement) * this->seq.length);
+    this->seq.head = (SequenceListDataElement *) malloc(sizeof(SequenceListDataElement) * this->seq.length);
     for (int i = 0; i < this->seq.length; ++i) {
         this->seq.head[i] = rand() % 100 + 1;
     }
@@ -44,7 +44,7 @@ bool Sequence::DestroyTable() {
 // 扩充序列的容量
 void Sequence::addLength() {
     this->seq.size = this->seq.size * 2;
-    this->seq.head = (SequenceDataElement *) realloc(this->seq.head, this->seq.size);
+    this->seq.head = (SequenceListDataElement *) realloc(this->seq.head, this->seq.size);
     if (this->seq.head == nullptr) {
         cout << "The Increase fail" << endl;
     }
