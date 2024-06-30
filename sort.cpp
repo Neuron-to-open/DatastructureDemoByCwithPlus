@@ -41,14 +41,14 @@ void DirectInsertSort(int *arr, int n) {
 void HalfInsertSort(int arr[] , int size ){
     for (int i = 1 ; i < size ; i ++){
         cout << "the order " << i << ": " << endl ;
-        cout << "\t" <<"ÓĞĞòĞòÁĞ:"  ;
+        cout << "\t" <<"æœ‰åºåºåˆ—:"  ;
         for (int k = 0 ; k < i ; k ++){
             cout << arr[k] << " " ;
         }
         cout << endl ;
-        cout << "\t" << "ĞèÒª²åÈëµÄÊı¾İ:" << arr[i] << endl ;
+        cout << "\t" << "éœ€è¦æ’å…¥çš„æ•°æ®:" << arr[i] << endl ;
 
-        int key = arr[i] ; //±ê¼Ç´ı²åÈëÔªËØ
+        int key = arr[i] ; //æ ‡è®°å¾…æ’å…¥å…ƒç´ 
         int left = 0 ;
         int right = i -1 ;
 
@@ -69,10 +69,10 @@ void HalfInsertSort(int arr[] , int size ){
             arr[right+1] = key ;
 
         }
-        cout << "\t" << "²åÈëµÄÎ»ÖÃ: " << right+1 << endl ;
+        cout << "\t" << "æ’å…¥çš„ä½ç½®: " << right+1 << endl ;
 
 
-        cout << "\t" <<  "ĞÂµÄÓĞĞòĞòÁĞ :" ;
+        cout << "\t" <<  "æ–°çš„æœ‰åºåºåˆ— :" ;
         for (int k = 0 ; k <= i ; k ++){
             cout << arr[k] << " " ;
         }
@@ -86,7 +86,7 @@ void BubbleSort(int arr[] , int size ){
     int i , j , count = 0 , round = 0 ,temp  ;
     for(i = 0 ; i < size - 1 ; i ++){
         for (j = 0 ; j < size - i -  1 ; j ++){
-            //Ã¿Ò»ÌËÌôÑ¡×î´óµÄ.
+            //æ¯ä¸€è¶ŸæŒ‘é€‰æœ€å¤§çš„.
             if (arr[j] > arr[j+1]){
                 temp = arr[j] ;
                 arr[j] = arr[j+1] ;
@@ -98,12 +98,12 @@ void BubbleSort(int arr[] , int size ){
     }
 
     PrintArr(arr , size) ;
-    cout << "\tÅÅĞò×Ü´ÎÊı" << round << ",±È½Ï×Ü´ÎÊı:" << count << endl ;
+    cout << "\tæ’åºæ€»æ¬¡æ•°" << round << ",æ¯”è¾ƒæ€»æ¬¡æ•°:" << count << endl ;
     return ;
 }
 
 
-// ¿ìËÙÅÅĞò
+// å¿«é€Ÿæ’åº
 int GetMinIndex(int *arr , int left , int right){
     int mid = (left + right) / 2;
 
@@ -191,9 +191,9 @@ void SimpleSelectSort(int *arr , int size) {
     int i, j, min, temp;
     for (i = 0; i < size; i++)
     {
-        // ³õÊ¼×îĞ¡ÖµÏÂ±ê
+        // åˆå§‹æœ€å°å€¼ä¸‹æ ‡
         min = i;
-        // ²éÕÒºóÃæ×îĞ¡ÖµµÄÏÂ±ê
+        // æŸ¥æ‰¾åé¢æœ€å°å€¼çš„ä¸‹æ ‡
         for (j = i + 1; j < size; j++)
         {
             if (arr[min] > arr[j])
@@ -201,7 +201,7 @@ void SimpleSelectSort(int *arr , int size) {
                 min = j;
             }
         }
-        // ½»»»×îĞ¡Öµ
+        // äº¤æ¢æœ€å°å€¼
         if (min != i)
         {
             temp = arr[i];
@@ -212,14 +212,14 @@ void SimpleSelectSort(int *arr , int size) {
 }
 
 
-//×î´ó¶Ñµ÷Õû
+//æœ€å¤§å †è°ƒæ•´
 void Heapify(int *arr , int k , int len){
     if( k < len ){
         int root = k ;
         int lchild = 2*k + 1 ;
         int rchild = 2*k + 2 ;
 
-        //²éÕÒ×îÓĞº¢×Ó½áµãÖĞµÄ×î´ó½áµã
+        //æŸ¥æ‰¾æœ€æœ‰å­©å­ç»“ç‚¹ä¸­çš„æœ€å¤§ç»“ç‚¹
         if ( lchild < len && arr[root] < arr[lchild]){
             root = lchild ;
         }
@@ -235,28 +235,28 @@ void Heapify(int *arr , int k , int len){
 }
 
 
-// ´´½¨×î´ó¶Ñ
+// åˆ›å»ºæœ€å¤§å †
 void CreateHeap(int *arr , int len) {
     int i ;
-    //×îºóÒ»¸ö½áµãÏÂ±ê
+    //æœ€åä¸€ä¸ªç»“ç‚¹ä¸‹æ ‡
     int last = len -1 ;
-    //×îºóÒ»¸ö½áµãµÄ¸¸½áµãÏÂ±ê
+    //æœ€åä¸€ä¸ªç»“ç‚¹çš„çˆ¶ç»“ç‚¹ä¸‹æ ‡
     int parent = (last-1) / 2 ;
-    //´Ó×îºóÒ»¸ö½áµãµÄ¸¸½áµãµ½¸ù½Úµã
+    //ä»æœ€åä¸€ä¸ªç»“ç‚¹çš„çˆ¶ç»“ç‚¹åˆ°æ ¹èŠ‚ç‚¹
     for (i = parent; i >= 0 ; i --){
-        cout << "¶Ô½áµã" << arr[i] << "×ö×î´ó¶Ñµ÷Õû" << endl ;
+        cout << "å¯¹ç»“ç‚¹" << arr[i] << "åšæœ€å¤§å †è°ƒæ•´" << endl ;
         Heapify(arr, i , len) ;
     }
 }
 
 
-// ¶ÑÅÅĞò
+// å †æ’åº
 void HeapSort(int *arr , int len) {
-    //´´»¹ÄÜ×î´ó¶Ñ²¢½øĞĞµ÷Õû
+    //åˆ›è¿˜èƒ½æœ€å¤§å †å¹¶è¿›è¡Œè°ƒæ•´
     CreateHeap(arr , len) ;
-    cout << "×î´ó¶Ñµ÷Õû!\n" << endl ;
+    cout << "æœ€å¤§å †è°ƒæ•´!\n" << endl ;
     int i ;
-    //ÒÀ´ÎÈ¡³ö¸ù½Úµã
+    //ä¾æ¬¡å–å‡ºæ ¹èŠ‚ç‚¹
     for (i = len-1 ; i >= 0 ; i --){
         Swap(arr[i] , arr[0]) ;
         Heapify(arr, 0, i) ;
@@ -310,10 +310,10 @@ void RadixSort(int *arr , int len) {
 
     for (i = 1 ; i <= 5 ; i ++) {
         for(j = 0 ; j < len ; j ++){
-            //»ñÈ¡µ±Ç°Êı¾İnum[j]µÄµÚiÎ»Êı
+            //è·å–å½“å‰æ•°æ®num[j]çš„ç¬¬iä½æ•°
             digit = GetDigit(arr[j] , i) ;
             k = 0 ;
-            //²éÕÒ²åÈëÎ»ÖÃ
+            //æŸ¥æ‰¾æ’å…¥ä½ç½®
             while (allot[digit][k]){
                 k ++ ;
             }
@@ -329,10 +329,10 @@ void RadixSort(int *arr , int len) {
             }
         }
 
-        cout << "¶ÔµÚ" << i << "Î»Êı½øĞĞ·ÖÅä" << endl ;
-        cout << "·ÖÅäÊı×é:" << endl ;
+        cout << "å¯¹ç¬¬" << i << "ä½æ•°è¿›è¡Œåˆ†é…" << endl ;
+        cout << "åˆ†é…æ•°ç»„:" << endl ;
         for(int p = 0 ; p <10 ; p ++){
-            cout << "µÚ" << i << "Î»=" << p ;
+            cout << "ç¬¬" << i << "ä½=" << p ;
             for (int q =0 ; q < 10 ; q ++){
                 cout << "\t" << allot[p][q] ;
             }

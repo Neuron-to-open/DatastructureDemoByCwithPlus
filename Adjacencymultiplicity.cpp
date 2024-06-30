@@ -9,7 +9,7 @@ using namespace std ;
 void Graph::InitAMLGraph(AMLGraph &G) {
     G.numVertexs = 0 ;
     G.numEdges = 0 ;
-    G.MutiList = new VertexNode [MaxVex] ;//³õÊ¼»¯Á´±íÍ·½áµã
+    G.MutiList = new VertexNode [MaxVex] ;//åˆå§‹åŒ–é“¾è¡¨å¤´ç»“ç‚¹
     int i ;
     for (i = 0 ; i < MaxVex ;i ++){
         G.MutiList[i].edgeList = new EdgeNode ;
@@ -17,23 +17,23 @@ void Graph::InitAMLGraph(AMLGraph &G) {
         G.MutiList[i].edgeList->nextTailEdge = nullptr ;
     }
 
-    cout << "ÒÑ¾­³õÊ¼»¯ÁÚ½Ó¶àÖØ±í" << endl ;
+    cout << "å·²ç»åˆå§‹åŒ–é‚»æ¥å¤šé‡è¡¨" << endl ;
 }
 
 void Graph::CreateAMLGraph(AMLGraph &G) {
-    cout << "ÇëÊäÈë¶¥µãÊıºÍ±ßÊı:" << endl ;
+    cout << "è¯·è¾“å…¥é¡¶ç‚¹æ•°å’Œè¾¹æ•°:" << endl ;
     cin >> G.numVertexs ;
     cin >> G.numEdges ;
 
     int i , j , k ;
     for (i = 0 ;i < G.numVertexs ; i ++){
-        cout << "ÇëÊäÈë" << i+1 << "¸ö¶¥µãµÄÊı¾İ:" ;
+        cout << "è¯·è¾“å…¥" << i+1 << "ä¸ªé¡¶ç‚¹çš„æ•°æ®:" ;
         cin >> G.MutiList[i].vertexData ;
     }
 
     EdgeType w ;
     for (k = 0 ; k < G.numEdges ; k ++){
-        cout << "ÇëÊäÈë±ß(vi, vj)µÄÍ·¡¢Î²¶¥µã¼°ÆäÈ¨Öµ:" ;
+        cout << "è¯·è¾“å…¥è¾¹(vi, vj)çš„å¤´ã€å°¾é¡¶ç‚¹åŠå…¶æƒå€¼:" ;
         cin >> i >> j >> w ;
 
         EdgeNode* s ;
@@ -43,17 +43,17 @@ void Graph::CreateAMLGraph(AMLGraph &G) {
         s->headVertex = i -1 ;
         s->tailVertex = j - 1 ;
 
-        //Í·²å·¨²åÈëÏàÍ¬Í·¶¥µãµÄ±ß½áµã
+        //å¤´æ’æ³•æ’å…¥ç›¸åŒå¤´é¡¶ç‚¹çš„è¾¹ç»“ç‚¹
         s->nextHeadEdge = G.MutiList[i-1].edgeList->nextHeadEdge ;
         G.MutiList[i-1].edgeList->nextHeadEdge = s ;
 
-        //Í·²å·¨²åÈëÏàÍ¬Î²¶¥µãµÄ±ß½áµã
+        //å¤´æ’æ³•æ’å…¥ç›¸åŒå°¾é¡¶ç‚¹çš„è¾¹ç»“ç‚¹
         s->nextTailEdge = G.MutiList[j-1].edgeList->nextTailEdge ;
         G.MutiList[j-1].edgeList->nextTailEdge = s ;
 
 
     }
-    cout << "ÒÑÍê³ÉÁÚ½Ó¶àÖØ±íµÄ´´½¨£¡" << endl ;
+    cout << "å·²å®Œæˆé‚»æ¥å¤šé‡è¡¨çš„åˆ›å»ºï¼" << endl ;
 }
 
 void Graph::DisplayAMLGraph(AMLGraph G) {
@@ -62,7 +62,7 @@ void Graph::DisplayAMLGraph(AMLGraph G) {
     for (i = 0 ; i < G.numVertexs ; i ++){
         p = G.MutiList[i].edgeList->nextHeadEdge ;
         while (p && !p->visitFlag){
-            cout << "±ß: " << G.MutiList[p->headVertex].vertexData << "<->" << G.MutiList[p->tailVertex].vertexData << " (" << p->edgeData << ")" <<  endl ;
+            cout << "è¾¹: " << G.MutiList[p->headVertex].vertexData << "<->" << G.MutiList[p->tailVertex].vertexData << " (" << p->edgeData << ")" <<  endl ;
             p->visitFlag =1 ;
             p = p->nextHeadEdge ;
         }

@@ -14,29 +14,29 @@ void Graph4::InitOLGrpah(OLGraph &G) {
 
     int i ;
     for (i = 0 ; i < MaxSize4 ; i ++){
-        //œ‡Õ¨Õ∑∂•µ„µƒª°
+        //Áõ∏ÂêåÂ§¥È°∂ÁÇπÁöÑÂºß
         G.vertexList4[i].headList = new ArcNode  ;
         G.vertexList4[i].headList->nextHeadArc = nullptr ;
         G.vertexList4[i].headList->nextTailArc = nullptr ;
 
-        //œ‡Õ¨Œ≤∂•µ„µƒª°
+        //Áõ∏ÂêåÂ∞æÈ°∂ÁÇπÁöÑÂºß
         G.vertexList4[i].tailList = new ArcNode ;
         G.vertexList4[i].tailList->nextTailArc = nullptr ;
         G.vertexList4[i].tailList->nextHeadArc = nullptr ;
     }
 
-    cout << "“—æ≠≥ı ºªØ Æ◊÷¡¥±Ì" << endl ;
+    cout << "Â∑≤ÁªèÂàùÂßãÂåñÂçÅÂ≠óÈìæË°®" << endl ;
 }
 
 void Graph4::CreateOLGraph(OLGraph &G) {
-    printf("«Î ‰»Î∂•µ„ ˝∫Õª° ˝:");
+    printf("ËØ∑ËæìÂÖ•È°∂ÁÇπÊï∞ÂíåÂºßÊï∞:");
     cin >> G.numVertexs >> G.numArcs ;
 
-    // ‰»Î∂•µ„ ˝æ›
+    //ËæìÂÖ•È°∂ÁÇπÊï∞ÊçÆ
     int i , j , k ;
     for (i = 0 ; i < G.numVertexs ; i ++){
         fflush(stdin) ;
-        printf("«Î ‰»Îµ⁄%d∏ˆ∂•µ„–≈œ¢:", i + 1);
+        printf("ËØ∑ËæìÂÖ•Á¨¨%d‰∏™È°∂ÁÇπ‰ø°ÊÅØ:", i + 1);
         cin >> G.vertexList4[i].vertexData ;
 
     }
@@ -44,21 +44,21 @@ void Graph4::CreateOLGraph(OLGraph &G) {
     int w ;
 
     for (k = 0 ; k < G.numArcs ; k ++){
-        printf("«Î ‰»Îª°(Ai, Aj)µƒÕ∑°¢Œ≤∂•µ„º∞∆‰»®÷µ:");
+        printf("ËØ∑ËæìÂÖ•Âºß(Ai, Aj)ÁöÑÂ§¥„ÄÅÂ∞æÈ°∂ÁÇπÂèäÂÖ∂ÊùÉÂÄº:");
         cin >> i >> j >> w ;
 
-        //¥¥Ω®ª°Ω·µ„
+        //ÂàõÂª∫ÂºßÁªìÁÇπ
         ArcNode * s ;
         s = new ArcNode  ;
         s->arcData = w ;
         s->headVertex = i -1 ;
         s->tailVertex = j -1 ;
 
-        //Õ∑≤Â∑®
+        //Â§¥ÊèíÊ≥ï
         s->nextHeadArc = G.vertexList4[i-1].headList->nextHeadArc ;
         G.vertexList4[i-1].headList->nextHeadArc = s ;
 
-        //Õ∑≤Â∑®≤Â»Îœ‡Õ¨µƒŒ≤Ω·µ„
+        //Â§¥ÊèíÊ≥ïÊèíÂÖ•Áõ∏ÂêåÁöÑÂ∞æÁªìÁÇπ
         s->nextTailArc =  G.vertexList4[j-1].tailList->nextTailArc ;
         G.vertexList4[j-1].tailList->nextTailArc = s ;
 
@@ -71,9 +71,9 @@ void Graph4::DisplayOLGraph(OLGraph G) {
     ArcNode *p;
     for (i = 0; i < G.numVertexs; i++)
     {
-        printf("∂•µ„:%c\n", G.vertexList4[i].vertexData);
-        // œ‡Õ¨Õ∑∂•µ„µƒª°¡¥±Ì
-        printf("\tœ‡Õ¨Õ∑∂•µ„µƒª°:");
+        printf("È°∂ÁÇπ:%c\n", G.vertexList4[i].vertexData);
+        // Áõ∏ÂêåÂ§¥È°∂ÁÇπÁöÑÂºßÈìæË°®
+        printf("\tÁõ∏ÂêåÂ§¥È°∂ÁÇπÁöÑÂºß:");
         p = G.vertexList4[i].headList;
         while (p->nextHeadArc)
         {
@@ -84,8 +84,8 @@ void Graph4::DisplayOLGraph(OLGraph G) {
                    G.vertexList4[p->tailVertex].vertexData);
         }
         printf("NULL\n");
-        // œ‡Õ¨Œ≤∂•µ„µƒª°¡¥±Ì
-        printf("\tœ‡Õ¨Œ≤∂•µ„µƒª°:");
+        // Áõ∏ÂêåÂ∞æÈ°∂ÁÇπÁöÑÂºßÈìæË°®
+        printf("\tÁõ∏ÂêåÂ∞æÈ°∂ÁÇπÁöÑÂºß:");
         p = G.vertexList4[i].tailList;
         while (p->nextTailArc)
         {

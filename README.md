@@ -53,7 +53,10 @@ c++ 版本 ：c++11
         h. 获取表的长度   --  getLength()
         i. 销毁表的所有   --  DestroyTable()
         j. 增大表的容量   --  addLength()
- 
+        定义的元素类型 SequenceDataElement
+
+         
+## 配置项
 第二部分 : 栈、队列与数组
 
 第三部分 : 串

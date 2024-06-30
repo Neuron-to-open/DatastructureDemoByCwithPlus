@@ -17,26 +17,26 @@ void Graph3::InitALGraph(ALGraph &G) {
         G.vertexList[i].edgeList->next = nullptr ;
     }
 
-    cout << "ÒÑ¾­³õÊ¼»¯ÁÚ½Ó±í" << endl ;
+    cout << "å·²ç»åˆå§‹åŒ–é‚»æ¥è¡¨" << endl ;
 
 }
 
 void Graph3::CreateALGrapg(ALGraph &G) {
-    printf("ÇëÊäÈë¶¥µãÊıºÍ±ßÊı:");
+    printf("è¯·è¾“å…¥é¡¶ç‚¹æ•°å’Œè¾¹æ•°:");
     cin >> G.numVertexs >> G.numEdges ;
 
     int i , j , k ;
     int w ;
-    //ÊäÈë¶¥µãÊı¾İ
+    //è¾“å…¥é¡¶ç‚¹æ•°æ®
     for (i = 0 ; i < G.numVertexs ; i ++ ){
         fflush(stdin) ;
-        printf("ÇëÊäÈëµÚ%d¸ö¶¥µãÊı¾İ:", i + 1);
+        printf("è¯·è¾“å…¥ç¬¬%dä¸ªé¡¶ç‚¹æ•°æ®:", i + 1);
         cin >> G.vertexList[i].vertexData ;
     }
 
-    //ÊäÈë±ßµÄÈ¨Öµ
+    //è¾“å…¥è¾¹çš„æƒå€¼
     for (k = 0 ; k < G.numEdges ; k ++){
-        printf("ÇëÊäÈë±ß(vi, vj)ÉÏµÄ¶¥µãĞòºÅ¼°È¨Öµ:");
+        printf("è¯·è¾“å…¥è¾¹(vi, vj)ä¸Šçš„é¡¶ç‚¹åºå·åŠæƒå€¼:");
         cin >> i >> j >> w ;
 
         EdgeNode3 *p1, *p2 ;
@@ -60,8 +60,8 @@ void Graph3::DisplayALGraph(ALGraph G) {
     EdgeNode3 *p;
     for (i = 0; i < G.numVertexs; i++)
     {
-        printf("¶¥µã:%c\t±ß:", G.vertexList[i].vertexData);
-        // »ñÈ¡±ßÁ´±íÊı¾İ
+        printf("é¡¶ç‚¹:%c\tè¾¹:", G.vertexList[i].vertexData);
+        // è·å–è¾¹é“¾è¡¨æ•°æ®
         p = G.vertexList[i].edgeList;
         while (p->next)
         {

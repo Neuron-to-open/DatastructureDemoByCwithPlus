@@ -7,21 +7,21 @@
 
 /**
  *  Insertion Sort
- *      Direct Insertion Sort ¡Ì
- *      Half Insertion Sort ¡Ì
+ *      Direct Insertion Sort âˆš
+ *      Half Insertion Sort âˆš
  *      shell Sort
  *  Swap Sort
- *      bubble Sort ¡Ì
- *      Quick Sort ¡Ì
+ *      bubble Sort âˆš
+ *      Quick Sort âˆš
  *  Select Sort
- *      Easy selection Sort ¡Ì
+ *      Easy selection Sort âˆš
  *      Heap Sort
  *  Merge Sort
  *  Radix Sort
  * */
 
 
-void PrintArr(int arr[] , int size ) ; //´òÓ¡Êı×é
+void PrintArr(int arr[] , int size ) ; //æ‰“å°æ•°ç»„
 
 void DirectInsertSort(int arr[] , int n );   // Direct Insertion Sort
 
