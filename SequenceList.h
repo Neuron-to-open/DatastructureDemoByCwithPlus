@@ -2,8 +2,8 @@
 // Created by 24887 on 2023/7/13.
 //
 
-#ifndef ALL_SEQUENCE_H
-#define ALL_SEQUENCE_H
+#ifndef ALL_SEQUENCELIST_H
+#define ALL_SEQUENCELIST_H
 
 /* 定义元素类型为整型 */
 typedef int SequenceListDataElement ;
@@ -15,7 +15,7 @@ typedef struct {
 }Seq;
 
 /* 顺序表类定义 */
-class Sequence {
+class SequenceList {
 public :
     Seq seq ; /* 顺序表实例 */
 
@@ -23,13 +23,13 @@ public :
     /**
      * 空参构造函数
      **/
-    Sequence();
+    SequenceList();
 
     /* 带初始大小的构造函数 */
     /**
      * size 初始化
      **/
-    Sequence(int size);
+    SequenceList(int size);
 
     /* 初始化顺序表，将长度置为0 */
     /**
@@ -123,4 +123,4 @@ public :
 
 
 
-#endif //ALL_SEQUENCE_H
+#endif //ALL_SEQUENCELIST_H

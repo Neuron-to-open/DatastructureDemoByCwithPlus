@@ -4,7 +4,7 @@ project(All)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(All
-        Sequence.cpp Sequence.h
+        SequenceList.cpp SequenceList.h
         main.cpp
         SingleList.cpp SingleList.h
         Binarytreetraversal.cpp Binarytreetraversal.h

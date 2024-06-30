@@ -3,7 +3,7 @@
 //
 
 
-#include "Sequence.h"
+#include "SequenceList.h"
 #include "SingleList.h"
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
@@ -41,7 +41,7 @@ using namespace std ;
  * */
 //顺序表
 void OpSeq(){
-    Sequence sequence(10) ; // 创建一个size为10顺序表的实例
+    SequenceList sequence(10) ; // 创建一个size为10顺序表的实例
     sequence.InitTable() ;       //实例中初始化链表各种数据
     sequence.ShowTable() ;       // 遍历
     cout << "-------------" << endl ;
