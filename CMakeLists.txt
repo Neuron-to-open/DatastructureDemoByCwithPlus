@@ -19,4 +19,5 @@ add_executable(All
         Adjacencymultiplicity.cpp Adjacencymultiplicity.h
         AdjacencyMartixGraph.cpp AdjacencyMartixGraph.h
         AdjacencyListGraph.cpp AdjacencyListGraph.h
-        OrthogonallistGraph.cpp OrthogonallistGraph.h)
+        OrthogonallistGraph.cpp OrthogonallistGraph.h
+)

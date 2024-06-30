@@ -40,7 +40,20 @@ c++ 版本 ：c++11
 详细介绍如何使用项目，包括API调用示例、界面操作指南等。可以包含截图或GIF动图以提高可读性。
 
 第一部分 : 线性表
-
+    
+    1.1 顺序表
+        顺序表的基本操作
+        a. 初始化赋值表   --  InitTable()
+        b. 打印输出表值   --  ShowTable()
+        c. 插入元素在表   --  InsertTable()
+        d. 删除元素在表   --  DeleteTable()
+        e. 获取位置元素   --  GetElem()
+        f. 获取元素位置   --  LocateElem()
+        g. 判断表是否空   --  IsEmpty()
+        h. 获取表的长度   --  getLength()
+        i. 销毁表的所有   --  DestroyTable()
+        j. 增大表的容量   --  addLength()
+ 
 第二部分 : 栈、队列与数组
 
 第三部分 : 串
