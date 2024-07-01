@@ -52,8 +52,11 @@ void OpSeq(){
     sequence.ShowTable() ;       // ±éÀú
     cout << "-------------" << endl ;
 
+    sequence.reverseSequenceList() ;
+    sequence.ShowTable() ;       // ±éÀú
+    cout << "-" << endl ;
+
     sequence.addLength() ;
-    cout << sequence.seq.size << endl ;
     cout << "-------------" << endl ;
 
     int data ;

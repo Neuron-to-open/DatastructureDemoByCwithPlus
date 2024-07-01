@@ -119,6 +119,8 @@ public :
       * @return bool 删除是否成功，成功返回true，失败返回false
       */
      bool DeleteTable(int i , int &data) ;
+
+     bool reverseSequenceList() ;
 };
 
 
