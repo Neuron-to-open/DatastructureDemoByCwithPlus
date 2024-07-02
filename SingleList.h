@@ -24,34 +24,29 @@ public:
      * 初始化链表。
      * @return 初始化成功返回true，失败返回false。
      */
-    // 初始化链表
     bool InitList_L() ;
 
     /**
      * 通过头插法创建链表。
      * @param n 链表中元素的数量。
      */
-    // 通过头插法创建链表
     void CreateList_H(int n ) ;
 
     /**
      * 通过尾插法创建链表。
      * @param n 链表中元素的数量。
      */
-    // 通过尾插法创建链表
     void CreateList_R(int n ) ;
 
     /**
      * 打印链表的所有元素。
      */
-    // 打印链表所有元素
     void ListPrint() ;
 
     /**
      * 销毁链表。
      * @return 销毁成功返回true，失败返回false。
      */
-    // 销毁链表
     bool DestroyList() ;
 
     /**
