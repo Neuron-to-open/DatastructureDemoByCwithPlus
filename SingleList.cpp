@@ -14,8 +14,6 @@ using namespace std ;
 */
 
 
-#include "SingleList.h"
-
 /**
  * 初始化单链表
  *
@@ -24,7 +22,7 @@ using namespace std ;
  *
  * @return bool 返回true表示链表已成功初始化（或已经是空链表），返回false表示链表已初始化过。
  */
-bool SingleList::InitList_L() {
+bool SingleList::InitList() {
     // 检查链表是否为空，如果为空，则初始化链表头节点为NULL
     if (this->linklist == nullptr) {
         return false;
@@ -33,6 +31,31 @@ bool SingleList::InitList_L() {
     return true;
 }
 
+
+/**
+ * 头插法创建单链表
+ *
+ * 本函数通过头插法创建一个含有n个元素的单链表。元素值为随机生成的1到100之间的整数。
+ *
+ * @param n 插入的元素数量
+ */
+void SingleList::CreateList_H(int n) {
+    Node *tmp = this->linklist; // 头结点
+    this->length = n;
+    int num = n;
+    int data;
+    while (num--) {
+        Node *s = new Node;
+        data = rand() % 100 + 1;
+        cout << data << " ";
+        s->data = data;
+        s->next = tmp->next;
+        tmp->next = s;
+    }
+    cout << endl;
+}
+
+
 /**
  * 尾插法创建单链表
  *
@@ -40,7 +63,7 @@ bool SingleList::InitList_L() {
  *
  * @param n 插入的元素数量
  */
-void SingleList::CreateList_R(int n) {
+void SingleList::CreateList_T(int n) {
     int num = n;
     this->length = n;
     int data = 0;
@@ -92,28 +115,6 @@ bool SingleList::DestroyList() {
     }
 }
 
-/**
- * 头插法创建单链表
- *
- * 本函数通过头插法创建一个含有n个元素的单链表。元素值为随机生成的1到100之间的整数。
- *
- * @param n 插入的元素数量
- */
-void SingleList::CreateList_H(int n) {
-    Node *tmp = this->linklist; // 头结点
-    this->length = n;
-    int num = n;
-    int data;
-    while (num--) {
-        Node *s = new Node;
-        data = rand() % 100 + 1;
-        cout << data << " ";
-        s->data = data;
-        s->next = tmp->next;
-        tmp->next = s;
-    }
-    cout << endl;
-}
 
 /**
  * 获取指定位置的元素
@@ -124,7 +125,7 @@ void SingleList::CreateList_H(int n) {
  * @param data 引用参数，用于返回元素值
  * @return bool 返回true表示成功获取元素，返回false表示位置不合法或链表为空。
  */
-bool SingleList::GetElem_L(int i, int &data) {
+bool SingleList::GetElem_H(int i, int &data) {
     Node *tmp = this->linklist->next;
     int j = 1;
     while (j < i && tmp != nullptr) {
@@ -147,7 +148,7 @@ bool SingleList::GetElem_L(int i, int &data) {
  * @param loc 引用参数，用于返回元素位置
  * @return bool 返回true表示找到元素，返回false表示未找到元素。
  */
-bool SingleList::LocateElem_L(int key, int &loc) {
+bool SingleList::LocateElem_H(int key, int &loc) {
     Node *tmp = this->linklist->next;
     int length = 0;
     while (tmp != nullptr && tmp->data != key) {
@@ -171,7 +172,7 @@ bool SingleList::LocateElem_L(int key, int &loc) {
  * @param e 插入的元素值
  * @return bool 返回true表示插入成功，返回false表示位置不合法或链表为空。
  */
-bool SingleList::ListInsert_L(int i, int e) {
+bool SingleList::ListInsert_H(int i, int e) {
     int j = 0;
     Node *tmp = this->linklist;
     // 找到第i-1个结点 举例为i=3 则j=1 就停止了即位置2
@@ -186,6 +187,7 @@ bool SingleList::ListInsert_L(int i, int e) {
     s->data = e;
     s->next = tmp->next;
     tmp->next = s;
+    this->length++;
     return true;
 }
 
@@ -198,7 +200,7 @@ bool SingleList::ListInsert_L(int i, int e) {
  * @param data 引用参数，用于返回删除的元素值
  * @return bool 返回true表示删除成功，返回false表示位置不合法或链表为空。
  */
-bool SingleList::ListDelete_L(int i, int &data) {
+bool SingleList::ListDelete_H(int i, int &data) {
     Node *tmp = this->linklist;
     int j = 0;
     while (tmp != nullptr && j < i - 1) {
@@ -214,4 +216,9 @@ bool SingleList::ListDelete_L(int i, int &data) {
     tmp->next = s->next;
     delete s;
     return true;
+}
+
+
+int SingleList::GetLength() {
+   return this->length;
 }

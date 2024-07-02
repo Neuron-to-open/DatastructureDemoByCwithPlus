@@ -51,7 +51,7 @@ void OpSeq(){
     sequence.InsertTable(3 , 520) ;
     sequence.ShowTable() ;       // 遍历
     cout << "-------------" << endl ;
-
+//
     sequence.reverseSequenceList() ;
     sequence.ShowTable() ;       // 遍历
     cout << "-" << endl ;
@@ -73,24 +73,25 @@ void OpSeq(){
 //单链表
 void OpSlL(){
     SingleList singleList ;
-    singleList.InitList_L() ;
-    singleList.CreateList_R(6) ;
+    singleList.InitList() ;
+    singleList.CreateList_T(6) ;
     singleList.ListPrint() ;
     if(singleList.DestroyList()){
         cout << "Having Deleting !!!" << endl ;
     }
     cout << "-----------" << endl ;
     SingleList singleList1 ;
-    singleList1.InitList_L() ;
+    singleList1.InitList() ;
     singleList1.CreateList_H(6) ;
     singleList1.ListPrint() ;
     cout << "-----------" << endl ;
-    singleList1.ListInsert_L(2,56);
+    singleList1.ListInsert_H(2,56);
     singleList1.ListPrint() ;
-    singleList1.ListInsert_L(6, 90) ;
+    singleList1.ListInsert_H(6, 90) ;
     singleList1.ListPrint() ;
-    singleList1.ListInsert_L(1,67) ;
+    singleList1.ListInsert_H(1,67) ;
     singleList1.ListPrint() ;
+    cout << singleList1.GetLength() << endl ;
     cout << "-----------" << endl ;
     if(singleList1.DestroyList()){
         cout << "Having Deleting !!!" << endl ;

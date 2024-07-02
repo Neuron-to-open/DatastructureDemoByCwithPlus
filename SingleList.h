@@ -24,7 +24,7 @@ public:
      * 初始化链表。
      * @return 初始化成功返回true，失败返回false。
      */
-    bool InitList_L() ;
+    bool InitList() ;
 
     /**
      * 通过头插法创建链表。
@@ -36,7 +36,7 @@ public:
      * 通过尾插法创建链表。
      * @param n 链表中元素的数量。
      */
-    void CreateList_R(int n ) ;
+    void CreateList_T(int n ) ;
 
     /**
      * 打印链表的所有元素。
@@ -56,7 +56,7 @@ public:
      * @return 获取成功返回true，失败返回false。
      */
     // 获取链表第i个元素
-    bool GetElem_L(int i , int &data) ;
+    bool GetElem_H(int i , int &data) ;
 
     /**
      * 从头开始在链表中定位元素key的位置。
@@ -65,7 +65,7 @@ public:
      * @return 定位成功返回true，失败返回false。
      */
     // 在链表中定位元素key的位置
-    bool LocateElem_L( int key , int &loc ) ;
+    bool LocateElem_H( int key , int &loc ) ;
 
     /**
      * 从头开始在链表的第i个位置插入元素e。
@@ -74,7 +74,7 @@ public:
      * @return 插入成功返回true，失败返回false。
      */
     // 在链表第i个位置插入元素e
-    bool ListInsert_L(int i , int e) ;
+    bool ListInsert_H(int i , int e) ;
 
     /**
      * 从头开始删除链表中第i个位置的元素。
@@ -83,7 +83,9 @@ public:
      * @return 删除成功返回true，失败返回false。
      */
     // 删除链表第i个位置的元素
-    bool ListDelete_L(int i , int &data ) ;
+    bool ListDelete_H(int i , int &data ) ;
+
+    int GetLength() ; // 获取链表长度
 };
 
 #endif //ALL_SINGLELIST_H
