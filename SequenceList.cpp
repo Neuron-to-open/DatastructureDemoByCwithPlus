@@ -10,10 +10,28 @@ using namespace std ;
 
 #define MAXSIZE 100 // 定义最大序列长度
 
+
+/**
+ * @brief 构造函数，用于创建一个空的顺序列表。
+ *
+ * 该构造函数不接受任何参数，创建一个初始大小为0的顺序列表。
+ */
+SequenceList::SequenceList() {
+}
+
+/**
+ * @brief 构造函数，用于创建一个指定大小的顺序列表。
+ *
+ * @param size 初始分配给顺序列表的元素数量。
+ *
+ * 该构造函数接受一个整数参数来指定顺序列表的初始大小。
+ * 它将根据指定的大小为顺序列表分配足够的空间。
+ */
 // 初始化序列
 SequenceList::SequenceList(int size) {
     this->seq.size = size;
 }
+
 
 
 /**

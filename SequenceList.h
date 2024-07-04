@@ -19,13 +19,13 @@ class SequenceList {
 public :
     Seq seq ; /* 顺序表实例 */
 
-    /* 默认构造函数，初始化顺序表 */
+
     /**
      * 空参构造函数
      **/
     SequenceList();
 
-    /* 带初始大小的构造函数 */
+
     /**
      * size 初始化
      **/
