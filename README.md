@@ -56,7 +56,7 @@ c++ 版本 ：c++11
         定义的元素类型 SequenceDataElement
 
     1.2 链表
-        链表的基本操作
+        A.单链表的基本操作
         a. 初始化链表   --  InitList()
         b. 头插法创建链表   --  CreateList_H() 
         c. 尾插法创建链表   --  CreateList_T()
@@ -68,6 +68,25 @@ c++ 版本 ：c++11
         i. 删除指定位置的元素   --  ListDelete_H(int i, int &data)
         j. 求取链表长度   --  getLength()
         定义的元素类型 SingleListDataElement
+        默认带头结点的单链表 
+
+        B.双链表的基本操作
+        a. 初始化双链表   --  InitDLinkList()
+        b. 头插法创建双链表   --  CreateDLinkList_H() 
+        c. 尾插法创建双链表   --  CreateDLinkList_T()
+        d. 打印双链表   --  DLinkListPrint()
+
+第二部分 : 栈、队列与数组
+
+    2.1 栈
+        栈的基本操作
+        a. 初始化栈   --  InitStack()
+        b. 压栈   --  Push()
+        c. 弹栈   --  Pop()        
+        d. 栈是否为空   --  IsEmpty()
+
+    2.2 
+
 ## 配置项
 第二部分 : 栈、队列与数组
 
