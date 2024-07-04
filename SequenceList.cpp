@@ -19,6 +19,7 @@ using namespace std ;
 SequenceList::SequenceList() {
 }
 
+
 /**
  * @brief 构造函数，用于创建一个指定大小的顺序列表。
  *

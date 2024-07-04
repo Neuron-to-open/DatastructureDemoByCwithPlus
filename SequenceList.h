@@ -17,14 +17,13 @@ typedef struct {
 /* 顺序表类定义 */
 class SequenceList {
 public :
-    Seq seq ; /* 顺序表实例 */
 
+    Seq seq ; /* 顺序表实例 */
 
     /**
      * 空参构造函数
      **/
     SequenceList();
-
 
     /**
      * size 初始化
