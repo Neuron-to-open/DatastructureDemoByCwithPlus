@@ -5,9 +5,9 @@
 #ifndef ALL_CIRCLESINGLELIST_H
 #define ALL_CIRCLESINGLELIST_H
 
-typedef int ElemTypeCSL ;
+typedef int CircleSingleLisDataElement ;
 typedef struct CirNode{
-    ElemTypeCSL data ;
+    CircleSingleLisDataElement data ;
     struct CirNode *next ;
 }CirNode;
 
@@ -17,14 +17,33 @@ public:
     int length = 0 ;
 
 
+    /**
+     * 初始化链表。
+     * @return 初始化成功返回true，失败返回false。
+     */
     bool InitList_L() ;
 
-    void CreateList_H(int n ) ; //头插法
+    /**
+     * 使用头插法创建链表。
+     * @param n 链表中元素的数量。
+     */
+    void CreateList_H(int n ) ;
 
-    void CreateList_R(int n ) ; //尾插法
+    /**
+     * 使用尾插法创建链表。
+     * @param n 链表中元素的数量。
+     */
+    void CreateList_R(int n ) ;
 
+    /**
+     * 打印链表中的所有元素。
+     */
     void ListPrint() ;
 
+    /**
+     * 销毁链表。
+     * @return 销毁成功返回true，失败返回false。
+     */
     bool DestroyList() ;
 
 };
