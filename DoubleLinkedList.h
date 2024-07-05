@@ -13,7 +13,7 @@ typedef struct DNode{
 
 class DoubleLinkedList {
 public:
-    DNode *dll = new DNode; //头指针
+    DNode *dll = new DNode; //头结点
     int length ; //链表长度
     
     /**
@@ -56,6 +56,16 @@ public:
      * 这是一个用于调试和用户界面的函数，帮助查看链表的当前状态。
      */
     void DisplayLink() ;
+
+
+    /**
+     * 销毁链表函数的声明。
+     *
+     * 该函数旨在销毁链表及其所有节点，释放相应的内存资源。调用后，链表应被视为无效。
+     *
+     * @return 返回一个布尔值，指示销毁操作是否成功。具体实现中，可能返回true表示成功，或false表示失败。
+     */
+    void DestroyList() ;
 
 };
 #endif //ALL_DOUBLELINKEDLIST_H
