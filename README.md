@@ -42,6 +42,7 @@ c++ 版本 ：c++11
 第一部分 : 线性表
     
     1.1 顺序表
+        SequenceList.cpp SequenceList.h
         顺序表的基本操作
         a. 初始化赋值表   --  InitTable()
         b. 打印输出表值   --  ShowTable()
@@ -56,7 +57,8 @@ c++ 版本 ：c++11
         定义的元素类型 SequenceDataElement
 
     1.2 链表
-        A.单链表的基本操作
+        A.SingleList.cpp SingleList.h
+        单链表的基本操作
         a. 初始化链表   --  InitList()
         b. 头插法创建链表   --  CreateList_H() 
         c. 尾插法创建链表   --  CreateList_T()
@@ -70,11 +72,22 @@ c++ 版本 ：c++11
         定义的元素类型 SingleListDataElement
         默认带头结点的单链表 
 
-        B.双链表的基本操作
+        B.DoubleLinkList.cpp DoubleLinkList.h
+        双链表的基本操作
         a. 初始化双链表   --  InitDLinkList()
         b. 头插法创建双链表   --  CreateDLinkList_H() 
         c. 尾插法创建双链表   --  CreateDLinkList_T()
         d. 打印双链表   --  DLinkListPrint()
+
+        C.CircleSingleList.cpp CircleSingleList.h
+        循环单链表的基本操作
+        a. 初始化循环单链表   --  InitCircleList()
+        b. 头插法创建循环单链表   --  CreateCircleList_H() 
+        c. 尾插法创建循环单链表   --  CreateCircleList_T()
+        d. 打印循环单链表   --  CircleListPrint()
+        e. 销毁循环单链表   --  DestroyCircleList()
+
+        D.CircleDoubleLinkList.cpp CircleDoubleLinkList.h
 
 第二部分 : 栈、队列与数组
 
