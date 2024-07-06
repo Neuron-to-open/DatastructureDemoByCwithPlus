@@ -23,7 +23,7 @@ using namespace std ;
  * @return bool 返回true表示链表已成功初始化（或已经是空链表），返回false表示链表已初始化过。
  */
 bool SingleList::InitList() {
-    // 检查链表是否为空，如果为空，则初始化链表头节点为NULL
+    // 检查链表是否为空，如果为空，则初始化链表头结点为NULL
     if (this->linklist == nullptr) {
         return false;
     }
