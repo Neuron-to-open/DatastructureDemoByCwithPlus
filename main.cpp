@@ -7,6 +7,7 @@
 #include "SingleList.h"
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
+#include "SequenceStack.h"
 #include "StackAndQueue.h"
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
@@ -279,6 +280,28 @@ int main()
 
             }
             case 3:{
+                cout << "栈与队列" << endl ;
+                SequenceStack sequenceStack ;
+                sequenceStack.InitSequenceStack() ;
+                cout << "Create an another sequenceStack successfully" << endl ;
+                sequenceStack.Push(568) ;
+                if (sequenceStack.EmptySequenceStack()){
+                    cout << "Stack is Empty" << endl ;
+                }else {
+                    cout << "Stack is not Empty" << endl ;
+                }
+
+                SequenceStackDataElement data ;
+                sequenceStack.Pop(data) ;
+                cout << "Pop the data :" << data << endl ;
+
+
+                cin >> data ;
+                if ( data == -1) {
+                    break ;
+                }
+
+
                 //栈与队列
                 cout << "括号匹配问题" << endl ;
                 char str[10] = {0} ;
