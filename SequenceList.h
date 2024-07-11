@@ -9,8 +9,8 @@
 typedef int SequenceListDataElement ;
 /* 定义顺序表结构 */
 /*
- *
- * typedef: 这个关键字用于为结构体定义一个新的类型名。在这里，我们使用typedef将结构体Node定义为一种新的类型，简化了以后的使用。
+
+typedef: 这个关键字用于为结构体定义一个新的类型名。在这里，我们使用typedef将结构体Node定义为一种新的类型，简化了以后的使用。
 
 struct Node: 这是结构体的定义。结构体是一种聚合数据类型，可以包含多个不同类型的数据。
 
