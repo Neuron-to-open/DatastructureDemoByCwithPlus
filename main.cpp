@@ -296,45 +296,6 @@ int main()
                 cout << "Pop the data :" << data << endl ;
 
 
-                cin >> data ;
-                if ( data == -1) {
-                    break ;
-                }
-
-
-                //栈与队列
-                cout << "括号匹配问题" << endl ;
-                char str[10] = {0} ;
-                cin >> str ;
-                if(Check(str , 6)){
-                    cout << "括号匹配" << endl ;
-                }else {
-                    cout << "匹配失败" << endl ;
-                }
-
-                //表达式的转换
-                stack<char> s1;//结果栈，入操作数
-                stack<char> s2;//辅助栈，入运算符和括号
-
-                stack<char> result;//输出用
-
-                string expression("(a+b)*c+d-(e+g)*h");
-                cout << "转换前为中缀式" << expression << endl;
-                convert(expression, s1, s2);
-                cout << "转换为后缀式";
-
-                while (!(s1.empty()))
-                {
-                    char temp = s1.top();
-                    s1.pop();
-                    result.push(temp);
-                }
-                while (!(result.empty()))
-                {
-                    cout << result.top();
-                    result.pop();
-                }
-                cout << endl ;
                 break ;
             }
             case 4:{
