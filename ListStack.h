@@ -21,5 +21,6 @@ public:
     void InitListStack() ;
     bool Pop(LiStackDataElemType &data) ;
     bool Push(LiStackDataElemType data) ;
+    bool DestroyListStack() ;
 };
 #endif //ALL_LISTSTACK_H

@@ -21,4 +21,6 @@ add_executable(All
         AdjacencyListGraph.cpp AdjacencyListGraph.h
         OrthogonallistGraph.cpp OrthogonallistGraph.h
         ListStack.cpp ListStack.h
+        SequenceQueue.cpp
+        SequenceQueue.h
 )

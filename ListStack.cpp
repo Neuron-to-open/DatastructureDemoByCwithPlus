@@ -77,3 +77,27 @@ bool ListStack::GetTop(LiStackDataElemType &data) {
         return false;
     }
 }
+
+bool ListStack::DestroyListStack() {
+    int flag = -1 ;
+
+    if (this->top->next == nullptr) {
+        cout << "Stack is empty" << endl;
+        flag = 0;
+    }else {
+        StackNode *temp = this->top->next;
+        while (temp != nullptr) {
+            StackNode *next = temp->next;
+            delete temp;
+            temp = next;
+        }
+        this->top->next = nullptr;
+        flag = 1 ;
+        cout << "DestroyListStack successfully" << endl;
+    }
+    if (flag == 1 || flag == 0) {
+        return true;
+    }else {
+        return false;
+    }
+}
