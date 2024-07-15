@@ -31,6 +31,7 @@ SequenceList::SequenceList() {
 // 初始化序列
 SequenceList::SequenceList(int size) {
     this->seq.size = size;
+    cout << "Initialize the sequence list with size: " << this->seq.size << endl;
 }
 
 
@@ -58,6 +59,7 @@ void SequenceList::InitTable() {
     for (int i = 0; i < this->seq.length; ++i) {
         this->seq.head[i] = rand() % 100 + 1;
     }
+    cout << "Initialize the sequence list with random values " << endl;
 }
 
 
@@ -77,6 +79,7 @@ void SequenceList::ShowTable() {
     }
     // 输出换行符，以结束当前行的打印
     cout << endl;
+    cout << "The length of the sequence list is: " << this->seq.length << endl;
 }
 
 
@@ -95,9 +98,11 @@ bool SequenceList::DestroyTable() {
         // 释放顺序表头部的内存空间，即释放整个表的空间
         free(this->seq.head);
         // 表成功销毁，返回true
+        cout << "Destroy the sequence list." << endl;
         return true;
     }
     // 表为空，无需销毁，返回false
+    cout << "The sequence list is empty. No need to destroy." << endl;
     return false;
 }
 
@@ -127,6 +132,7 @@ void SequenceList::addLength() {
 // 返回值：序列中元素的数量。
 // 获取序列的当前长度
 int SequenceList::getLength() {
+    cout << "The length of the sequence list is: " << this->seq.length << endl;
     return this->seq.length;
 }
 
@@ -136,8 +142,10 @@ int SequenceList::getLength() {
 // 判断序列是否为空
 bool SequenceList::isEmpty() {
     if (getLength() == 0) {
+        cout << "The sequence list is empty." << endl;
         return true;
     }
+    cout << "The sequence list is not empty." << endl;
     return false;
 }
 
@@ -152,9 +160,11 @@ bool SequenceList::isEmpty() {
 int SequenceList::LocateElem(int e) {
     for (int i = 0; i < this->seq.length; i++) {
         if (this->seq.head[i] == e) {
+            cout << "The element " << e << " is located at index " << i + 1 << endl;
             return i + 1;
         }
     }
+    cout << "The element " << e << " is not in the sequence list." << endl;
     return -1;
 }
 
@@ -168,9 +178,11 @@ int SequenceList::LocateElem(int e) {
 // 获取序列中指定位置的元素，通过引用返回
 bool SequenceList::getElem(int i, int &Elem) {
     if (this->seq.length == 0 || this->seq.length < i || i <= 0) {
+        cout << "The index is out of range or the sequence list is empty." << endl;
         return false;
     }
     Elem = this->seq.head[i - 1];
+    cout << "The element at index " << i << " is " << Elem << endl;
     return true;
 }
 
@@ -190,8 +202,10 @@ bool SequenceList::InsertTable(int i, int elem) {
         }
         this->seq.head[j + 1] = elem;
         this->seq.length++;
+        cout << "The element " << elem << " is inserted at index " << i << endl;
         return true;
     }
+    cout << "The index is out of range or the sequence list is full." << endl;
     return false;
 }
 
@@ -210,8 +224,10 @@ bool SequenceList::DeleteTable(int i, int &data) {
             this->seq.head[j] = this->seq.head[j + 1];
         }
         this->seq.length--;
+        cout << "The element " << data << " is deleted at index " << i << endl;
         return true;
     }
+    cout << "The index is out of range or the sequence list is empty." << endl;
     return false;
 }
 
@@ -232,6 +248,7 @@ bool SequenceList::reverseSequenceList() {
         i++;
         j--;
     }
+    cout << "The sequence list is reversed." << endl;
     return true;
 }
 

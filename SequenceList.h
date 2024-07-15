@@ -30,7 +30,6 @@ typedef struct {
 /* 顺序表类定义 */
 class SequenceList {
 public :
-
     Seq seq ; /* 顺序表实例 */
 
     /**
