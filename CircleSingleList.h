@@ -13,7 +13,8 @@ typedef struct CirNode{
 
 class CircleSingleList{
 public:
-    CirNode *CircleList = new CirNode ;
+
+    CirNode *CircleListHeadNode = new CirNode ;
     int length = 0 ;
 
 
