@@ -24,12 +24,12 @@ DoubleLinkedList::DoubleLinkedList() {
  * @return 初始化成功返回true，否则返回false。
  */
 bool DoubleLinkedList::InitTDoubleList() {
-    if(this->dll == nullptr){
+    if(this->DllHeadNode == nullptr){
         return false ;
     }
-    this->dll->next = nullptr ;
-    this->dll->prior = nullptr ;
-
+    this->DllHeadNode->next = nullptr ;
+    this->DllHeadNode->prior = nullptr ;
+    cout << "The DllList has been initialized." << endl ;
     return true ;
 }
 
@@ -38,7 +38,7 @@ bool DoubleLinkedList::InitTDoubleList() {
  * @param n 链表中节点的数量。
  */
 void DoubleLinkedList::CreateList_H(int n) {
-    DNode *tmp = this->dll ;
+    DNode *tmp = this->DllHeadNode ;
     this->length = n ;
     int num = n ;
     int data ;
@@ -52,6 +52,7 @@ void DoubleLinkedList::CreateList_H(int n) {
         tmp->next = s ;
     }
     cout << endl ;
+    cout << "The DllList has been created by head insertion." << endl ;
 }
 
 /**
@@ -59,12 +60,13 @@ void DoubleLinkedList::CreateList_H(int n) {
  * 从链表头开始遍历，打印每个节点的数据。
  */
 void DoubleLinkedList::DisplayLink() {
-    DNode *tmp = this->dll ;
+    DNode *tmp = this->DllHeadNode ;
     while (tmp->next != nullptr ){
         cout << tmp->next->data << " " ;
         tmp = tmp->next ;
     }
     cout << endl ;
+    cout << "The DllList has been displayed." << endl ;
 }
 
 /**
@@ -75,7 +77,7 @@ void DoubleLinkedList::CreateList_T(int n) {
     int num = n ;
     this->length = n ;
     int data = 0 ;
-    DNode *tmp = this->dll ;
+    DNode *tmp = this->DllHeadNode ;
     while(num --){
         DNode *s = new DNode  ;
         data = rand()%100 +1 ;
@@ -87,6 +89,7 @@ void DoubleLinkedList::CreateList_T(int n) {
         tmp = s ;
     }
     cout << endl ;
+    cout << "The DllList has been created by tail insertion." << endl ;
 }
 
 /**
@@ -98,13 +101,13 @@ void DoubleLinkedList::CreateList_T(int n) {
  */
 void DoubleLinkedList::DestroyList() {
     // 检查链表是否为空，避免空指针解引用
-    if (this->dll == nullptr) {
+    if (this->DllHeadNode == nullptr) {
         cout << "The list is empty." << endl;
         return ; // 链表为空，直接返回成功
     }
 
     // 保存当前节点，从链表头开始遍历
-    DNode *tmp = dll;
+    DNode *tmp = DllHeadNode;
     DNode *p = nullptr;
 
     // 遍历链表直到最后一个节点
@@ -124,7 +127,7 @@ void DoubleLinkedList::DestroyList() {
     delete tmp;
 
     // 清空头指针，确保链表状态一致
-    dll = nullptr;
+    DllHeadNode = nullptr;
 
     // 打印提示信息
     cout << "The list has been destroyed." << endl;

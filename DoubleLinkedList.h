@@ -13,7 +13,7 @@ typedef struct DNode{
 
 class DoubleLinkedList {
 public:
-    DNode *dll = new DNode; //头结点
+    DNode *DllHeadNode = new DNode; //头结点
     int length ; //链表长度
     
     /**
