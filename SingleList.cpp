@@ -24,10 +24,11 @@ using namespace std ;
  */
 bool SingleList::InitList() {
     // 检查链表是否为空，如果为空，则初始化链表头结点为NULL
-    if (this->linklist == nullptr) {
+    if (this->LinklistNode == nullptr) {
         return false;
     }
-    this->linklist->next = nullptr; // 头结点指针域置空
+    this->LinklistNode->next = nullptr; // 头结点指针域置空
+    cout << "链表已初始化" << endl;
     return true;
 }
 
@@ -40,7 +41,7 @@ bool SingleList::InitList() {
  * @param n 插入的元素数量
  */
 void SingleList::CreateList_H(int n) {
-    Node *tmp = this->linklist; // 头结点
+    Node *tmp = this->LinklistNode; // 头结点
     this->length = n;
     int num = n;
     int data;
@@ -53,6 +54,7 @@ void SingleList::CreateList_H(int n) {
         tmp->next = s;
     }
     cout << endl;
+    cout << "链表头插法创建成功" << endl;
 }
 
 
@@ -67,7 +69,7 @@ void SingleList::CreateList_T(int n) {
     int num = n;
     this->length = n;
     int data = 0;
-    Node* tmp = this->linklist;
+    Node* tmp = this->LinklistNode;
     while (num--) {
         Node *s = new Node;
         data = rand() % 100 + 1;
@@ -76,6 +78,7 @@ void SingleList::CreateList_T(int n) {
         tmp->next = s;
         tmp = s;
     }
+    cout << "链表尾插法创建成功" << endl;
 }
 
 /**
@@ -84,12 +87,13 @@ void SingleList::CreateList_T(int n) {
  * 本函数用于打印链表中的所有元素，从头节点之后的第一个节点开始打印，直到最后一个节点。
  */
 void SingleList::ListPrint() {
-    Node *tmp = this->linklist->next;
+    Node *tmp = this->LinklistNode->next;
     while (tmp != nullptr) {
         cout << tmp->data << " ";
         tmp = tmp->next;
     }
     cout << endl;
+    cout << "链表打印成功" << endl;
 }
 
 /**
@@ -100,17 +104,19 @@ void SingleList::ListPrint() {
  * @return bool 返回true表示链表已成功销毁，返回false表示链表为空。
  */
 bool SingleList::DestroyList() {
-    if (this->linklist != nullptr) {
-        Node *tmp = this->linklist;
+    if (this->LinklistNode != nullptr) {
+        Node *tmp = this->LinklistNode;
         Node *s = tmp->next;
         while (s != nullptr) {
             tmp = s->next;
             delete s;
             s = tmp;
         }
-        this->linklist->next = nullptr;
+        this->LinklistNode->next = nullptr;
+        cout << "链表已销毁" << endl;
         return true;
     } else {
+        cout << "链表为空，无法销毁" << endl;
         return false;
     }
 }
@@ -126,7 +132,7 @@ bool SingleList::DestroyList() {
  * @return bool 返回true表示成功获取元素，返回false表示位置不合法或链表为空。
  */
 bool SingleList::GetElem_H(int i, int &data) {
-    Node *tmp = this->linklist->next;
+    Node *tmp = this->LinklistNode->next;
     int j = 1;
     while (j < i && tmp != nullptr) {
         tmp = tmp->next;
@@ -136,6 +142,7 @@ bool SingleList::GetElem_H(int i, int &data) {
         return false;
     }
     data = tmp->data;
+    cout << "获取元素成功" << endl;
     return true;
 }
 
@@ -149,7 +156,7 @@ bool SingleList::GetElem_H(int i, int &data) {
  * @return bool 返回true表示找到元素，返回false表示未找到元素。
  */
 bool SingleList::LocateElem_H(int key, int &loc) {
-    Node *tmp = this->linklist->next;
+    Node *tmp = this->LinklistNode->next;
     int length = 0;
     while (tmp != nullptr && tmp->data != key) {
         tmp = tmp->next;
@@ -160,6 +167,7 @@ bool SingleList::LocateElem_H(int key, int &loc) {
         return false;
     }
     loc = length;
+    cout << "找到元素位置" << endl;
     return true;
 }
 
@@ -174,7 +182,7 @@ bool SingleList::LocateElem_H(int key, int &loc) {
  */
 bool SingleList::ListInsert_H(int i, int e) {
     int j = 0;
-    Node *tmp = this->linklist;
+    Node *tmp = this->LinklistNode;
     // 找到第i-1个结点 举例为i=3 则j=1 就停止了即位置2
     while (tmp != nullptr && j < i - 1) {
         j++;
@@ -188,6 +196,7 @@ bool SingleList::ListInsert_H(int i, int e) {
     s->next = tmp->next;
     tmp->next = s;
     this->length++;
+    cout << "插入元素成功" << endl;
     return true;
 }
 
@@ -201,7 +210,7 @@ bool SingleList::ListInsert_H(int i, int e) {
  * @return bool 返回true表示删除成功，返回false表示位置不合法或链表为空。
  */
 bool SingleList::ListDelete_H(int i, int &data) {
-    Node *tmp = this->linklist;
+    Node *tmp = this->LinklistNode;
     int j = 0;
     while (tmp != nullptr && j < i - 1) {
         tmp = tmp->next;
@@ -215,10 +224,12 @@ bool SingleList::ListDelete_H(int i, int &data) {
     data = s->data;
     tmp->next = s->next;
     delete s;
+    cout << "删除元素成功" << endl;
     return true;
 }
 
 
 int SingleList::GetLength() {
+    cout << "链表长度为" << this->length << endl;
    return this->length;
 }

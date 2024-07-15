@@ -17,7 +17,7 @@ typedef struct Node{
 // 单链表类定义
 class SingleList{
 public:
-    Node *linklist = new Node ;  // 头结点
+    Node *LinklistNode = new Node ;  // 头结点
 
     int length = 0  ; // 链表长度
 
