@@ -7,14 +7,17 @@
 using namespace std;
 bool ListStack::EmptyListStack() {
     if (this->top->next == nullptr) {
+        cout << "Stack is empty" << endl;
         return true;
     }
+    cout << "Stack is not empty" << endl;
     return false;
 }
 
+
 void ListStack::InitListStack() {
     this->top->next = nullptr;
-    cout << "InitListStack" << endl;
+    cout << "InitListStack successfully" << endl;
 }
 
 bool ListStack::Push(LiStackDataElemType data) {
@@ -92,12 +95,14 @@ bool ListStack::DestroyListStack() {
             temp = next;
         }
         this->top->next = nullptr;
-        flag = 1 ;
+        flag = 1;
         cout << "DestroyListStack successfully" << endl;
+        if (flag == 1 || flag == 0) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
-    if (flag == 1 || flag == 0) {
-        return true;
-    }else {
-        return false;
-    }
+
 }

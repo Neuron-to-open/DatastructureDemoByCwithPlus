@@ -12,6 +12,7 @@ typedef struct StackNode {
     struct StackNode *next;
 } StackNode;
 
+
 class ListStack {
 public:
     StackNode *top = new StackNode;
