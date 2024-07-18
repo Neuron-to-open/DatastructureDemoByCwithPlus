@@ -23,4 +23,6 @@ add_executable(All
         ListStack.cpp ListStack.h
         SequenceQueue.cpp
         SequenceQueue.h
+        ListQueue.cpp
+        ListQueue.h
 )
