@@ -59,16 +59,16 @@ c++ 版本 ：c++11
     1.2 链表
         A.SingleList.cpp SingleList.h
         单链表的基本操作
-        a. 初始化链表   --  InitList()
-        b. 头插法创建链表   --  CreateList_H() 
-        c. 尾插法创建链表   --  CreateList_T()
-        d. 打印链表   --  ListPrint()
-        e. 销毁链表   --  DestroyList()
-        f. 获取指定位置元素 -- GetElem_H(int i, int &data)      
-        g. 查找指定值的元素位置   --  LocateElem_H(int key, int &loc)
-        h. 在指定位置插入元素   --  ListInsert_H(int i, int e)      
-        i. 删除指定位置的元素   --  ListDelete_H(int i, int &data)
-        j. 求取链表长度   --  Seq_GetLength()
+        a. 初始化链表   --  List_Init()
+        b. 头插法创建链表   --  List_Create_H() 
+        c. 尾插法创建链表   --  List_Create_T()
+        d. 打印链表   --  List_Print()
+        e. 销毁链表   --  List_Destroy()
+        f. 获取指定位置元素 -- List_GetElem_H(int i, int &data)      
+        g. 查找指定值的元素位置   --  List_LocateElem_H(int key, int &loc)
+        h. 在指定位置插入元素   --  List_Insert_H(int i, int e)      
+        i. 删除指定位置的元素   --  List_Delete_H(int i, int &data)
+        j. 求取链表长度   --  List_GetLength()
         定义的元素类型 SingleListDataElement
         默认带头结点的单链表 
 
