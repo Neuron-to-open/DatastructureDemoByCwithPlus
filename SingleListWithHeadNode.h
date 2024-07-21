@@ -9,15 +9,15 @@
 typedef int SingleListDataElement ;  //定义关键字类型别名
 
 // 定义单链表节点结构体
-typedef struct Node{
+typedef struct SingleListNode{
     SingleListDataElement data ; // 节点数据域
-    struct Node *next ; // 节点指针域，指向下一个节点
-}Node;
+    struct SingleListNode *next ; // 节点指针域，指向下一个节点
+}SingleListNode;
 
 // 单链表类定义
 class SingleListWithHeadNode{
 public:
-    Node *LinklistNode = new Node ;  // 头结点
+    SingleListNode *LinklistNode = new SingleListNode ;  // 头结点
 
     int length = 0  ; // 链表长度
 

@@ -42,12 +42,12 @@ bool SingleListWithHeadNode::InitList() {
  * @param n 插入的元素数量
  */
 void SingleListWithHeadNode::CreateList_H(int n) {
-    Node *tmp = this->LinklistNode; // 头结点
+    SingleListNode *tmp = this->LinklistNode; // 头结点
     this->length = n;
     int num = n;
     int data;
     while (num--) {
-        Node *s = new Node;
+        SingleListNode *s = new SingleListNode;
         data = rand() % 100 + 1;
         cout << data << " ";
         s->data = data;
@@ -70,9 +70,9 @@ void SingleListWithHeadNode::CreateList_T(int n) {
     int num = n;
     this->length = n;
     int data = 0;
-    Node* tmp = this->LinklistNode;
+    SingleListNode* tmp = this->LinklistNode;
     while (num--) {
-        Node *s = new Node;
+        SingleListNode *s = new SingleListNode;
         data = rand() % 100 + 1;
         s->data = data;
         s->next = nullptr;
@@ -88,7 +88,7 @@ void SingleListWithHeadNode::CreateList_T(int n) {
  * 本函数用于打印链表中的所有元素，从头节点之后的第一个节点开始打印，直到最后一个节点。
  */
 void SingleListWithHeadNode::ListPrint() {
-    Node *tmp = this->LinklistNode->next;
+    SingleListNode *tmp = this->LinklistNode->next;
     while (tmp != nullptr) {
         cout << tmp->data << " ";
         tmp = tmp->next;
@@ -106,8 +106,8 @@ void SingleListWithHeadNode::ListPrint() {
  */
 bool SingleListWithHeadNode::DestroyList() {
     if (this->LinklistNode != nullptr) {
-        Node *tmp = this->LinklistNode;
-        Node *s = tmp->next;
+        SingleListNode *tmp = this->LinklistNode;
+        SingleListNode *s = tmp->next;
         while (s != nullptr) {
             tmp = s->next;
             delete s;
@@ -133,7 +133,7 @@ bool SingleListWithHeadNode::DestroyList() {
  * @return bool 返回true表示成功获取元素，返回false表示位置不合法或链表为空。
  */
 bool SingleListWithHeadNode::GetElem_H(int i, int &data) {
-    Node *tmp = this->LinklistNode->next;
+    SingleListNode *tmp = this->LinklistNode->next;
     int j = 1;
     while (j < i && tmp != nullptr) {
         tmp = tmp->next;
@@ -157,7 +157,7 @@ bool SingleListWithHeadNode::GetElem_H(int i, int &data) {
  * @return bool 返回true表示找到元素，返回false表示未找到元素。
  */
 bool SingleListWithHeadNode::LocateElem_H(int key, int &loc) {
-    Node *tmp = this->LinklistNode->next;
+    SingleListNode *tmp = this->LinklistNode->next;
     int length = 0;
     while (tmp != nullptr && tmp->data != key) {
         tmp = tmp->next;
@@ -183,7 +183,7 @@ bool SingleListWithHeadNode::LocateElem_H(int key, int &loc) {
  */
 bool SingleListWithHeadNode::ListInsert_H(int i, int e) {
     int j = 0;
-    Node *tmp = this->LinklistNode;
+    SingleListNode *tmp = this->LinklistNode;
     // 找到第i-1个结点 举例为i=3 则j=1 就停止了即位置2
     while (tmp != nullptr && j < i - 1) {
         j++;
@@ -192,7 +192,7 @@ bool SingleListWithHeadNode::ListInsert_H(int i, int e) {
     if (tmp == nullptr || j > i - 1) {
         return false;
     }
-    Node *s = new Node;
+    SingleListNode *s = new SingleListNode;
     s->data = e;
     s->next = tmp->next;
     tmp->next = s;
@@ -211,7 +211,7 @@ bool SingleListWithHeadNode::ListInsert_H(int i, int e) {
  * @return bool 返回true表示删除成功，返回false表示位置不合法或链表为空。
  */
 bool SingleListWithHeadNode::ListDelete_H(int i, int &data) {
-    Node *tmp = this->LinklistNode;
+    SingleListNode *tmp = this->LinklistNode;
     int j = 0;
     while (tmp != nullptr && j < i - 1) {
         tmp = tmp->next;
@@ -221,7 +221,7 @@ bool SingleListWithHeadNode::ListDelete_H(int i, int &data) {
     if (tmp == nullptr || tmp->next == nullptr) {
         return false;
     }
-    Node *s = tmp->next;
+    SingleListNode *s = tmp->next;
     data = s->data;
     tmp->next = s->next;
     delete s;
