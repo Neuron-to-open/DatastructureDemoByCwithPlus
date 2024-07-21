@@ -2,8 +2,8 @@
 // Created by 24887 on 2023/7/14.
 //
 
-#ifndef ALL_SINGLELIST_H
-#define ALL_SINGLELIST_H
+#ifndef ALL_SINGLELISTWITHHEADNODE_H
+#define ALL_SINGLELISTWITHHEADNODE_H
 
 // 定义单链表元素的类型别名
 typedef int SingleListDataElement ;  //定义关键字类型别名
@@ -15,7 +15,7 @@ typedef struct Node{
 }Node;
 
 // 单链表类定义
-class SingleList{
+class SingleListWithHeadNode{
 public:
     Node *LinklistNode = new Node ;  // 头结点
 
@@ -89,4 +89,4 @@ public:
     int GetLength() ; // 获取链表长度
 };
 
-#endif //ALL_SINGLELIST_H
+#endif //ALL_SINGLELISTWITHHEADNODE_H

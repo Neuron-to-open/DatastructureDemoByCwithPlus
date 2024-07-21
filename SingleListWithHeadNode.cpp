@@ -2,7 +2,7 @@
 // Created by 24887 on 2023/7/14.
 //
 
-#include "SingleList.h"
+#include "SingleListWithHeadNode.h"
 #include <cstdlib>
 #include <iostream>
 using namespace std ;
@@ -22,11 +22,12 @@ using namespace std ;
  *
  * @return bool 返回true表示链表已成功初始化（或已经是空链表），返回false表示链表已初始化过。
  */
-bool SingleList::InitList() {
+bool SingleListWithHeadNode::InitList() {
     // 检查链表是否为空，如果为空，则初始化链表头结点为NULL
     if (this->LinklistNode == nullptr) {
         return false;
     }
+    this->LinklistNode->data = -1 ;
     this->LinklistNode->next = nullptr; // 头结点指针域置空
     cout << "链表已初始化" << endl;
     return true;
@@ -40,7 +41,7 @@ bool SingleList::InitList() {
  *
  * @param n 插入的元素数量
  */
-void SingleList::CreateList_H(int n) {
+void SingleListWithHeadNode::CreateList_H(int n) {
     Node *tmp = this->LinklistNode; // 头结点
     this->length = n;
     int num = n;
@@ -65,7 +66,7 @@ void SingleList::CreateList_H(int n) {
  *
  * @param n 插入的元素数量
  */
-void SingleList::CreateList_T(int n) {
+void SingleListWithHeadNode::CreateList_T(int n) {
     int num = n;
     this->length = n;
     int data = 0;
@@ -86,7 +87,7 @@ void SingleList::CreateList_T(int n) {
  *
  * 本函数用于打印链表中的所有元素，从头节点之后的第一个节点开始打印，直到最后一个节点。
  */
-void SingleList::ListPrint() {
+void SingleListWithHeadNode::ListPrint() {
     Node *tmp = this->LinklistNode->next;
     while (tmp != nullptr) {
         cout << tmp->data << " ";
@@ -103,7 +104,7 @@ void SingleList::ListPrint() {
  *
  * @return bool 返回true表示链表已成功销毁，返回false表示链表为空。
  */
-bool SingleList::DestroyList() {
+bool SingleListWithHeadNode::DestroyList() {
     if (this->LinklistNode != nullptr) {
         Node *tmp = this->LinklistNode;
         Node *s = tmp->next;
@@ -131,7 +132,7 @@ bool SingleList::DestroyList() {
  * @param data 引用参数，用于返回元素值
  * @return bool 返回true表示成功获取元素，返回false表示位置不合法或链表为空。
  */
-bool SingleList::GetElem_H(int i, int &data) {
+bool SingleListWithHeadNode::GetElem_H(int i, int &data) {
     Node *tmp = this->LinklistNode->next;
     int j = 1;
     while (j < i && tmp != nullptr) {
@@ -155,7 +156,7 @@ bool SingleList::GetElem_H(int i, int &data) {
  * @param loc 引用参数，用于返回元素位置
  * @return bool 返回true表示找到元素，返回false表示未找到元素。
  */
-bool SingleList::LocateElem_H(int key, int &loc) {
+bool SingleListWithHeadNode::LocateElem_H(int key, int &loc) {
     Node *tmp = this->LinklistNode->next;
     int length = 0;
     while (tmp != nullptr && tmp->data != key) {
@@ -180,7 +181,7 @@ bool SingleList::LocateElem_H(int key, int &loc) {
  * @param e 插入的元素值
  * @return bool 返回true表示插入成功，返回false表示位置不合法或链表为空。
  */
-bool SingleList::ListInsert_H(int i, int e) {
+bool SingleListWithHeadNode::ListInsert_H(int i, int e) {
     int j = 0;
     Node *tmp = this->LinklistNode;
     // 找到第i-1个结点 举例为i=3 则j=1 就停止了即位置2
@@ -209,7 +210,7 @@ bool SingleList::ListInsert_H(int i, int e) {
  * @param data 引用参数，用于返回删除的元素值
  * @return bool 返回true表示删除成功，返回false表示位置不合法或链表为空。
  */
-bool SingleList::ListDelete_H(int i, int &data) {
+bool SingleListWithHeadNode::ListDelete_H(int i, int &data) {
     Node *tmp = this->LinklistNode;
     int j = 0;
     while (tmp != nullptr && j < i - 1) {
@@ -229,7 +230,7 @@ bool SingleList::ListDelete_H(int i, int &data) {
 }
 
 
-int SingleList::GetLength() {
+int SingleListWithHeadNode::GetLength() {
     cout << "链表长度为" << this->length << endl;
    return this->length;
 }

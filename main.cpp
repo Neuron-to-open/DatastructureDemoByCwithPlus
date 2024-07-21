@@ -4,7 +4,7 @@
 
 
 #include "SequenceList.h"
-#include "SingleList.h"
+#include "SingleListWithHeadNode.h"
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
 #include "SequenceStack.h"
@@ -73,7 +73,7 @@ void OpSeq(){
 
 //µ¥Á´±í
 void OpSlL(){
-    SingleList singleList ;
+    SingleListWithHeadNode singleList ;
     singleList.InitList() ;
     singleList.CreateList_T(6) ;
     singleList.ListPrint() ;
@@ -81,7 +81,7 @@ void OpSlL(){
         cout << "Having Deleting !!!" << endl ;
     }
     cout << "-----------" << endl ;
-    SingleList singleList1 ;
+    SingleListWithHeadNode singleList1 ;
     singleList1.InitList() ;
     singleList1.CreateList_H(6) ;
     singleList1.ListPrint() ;

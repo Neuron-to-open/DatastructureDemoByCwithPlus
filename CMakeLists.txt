@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(All
         SequenceList.cpp SequenceList.h
         main.cpp
-        SingleList.cpp SingleList.h
+        SingleListWithHeadNode.cpp SingleListWithHeadNode.h
         Binarytreetraversal.cpp Binarytreetraversal.h
         AvlTree.cpp AvlTree.h
         sort.cpp sort.h
