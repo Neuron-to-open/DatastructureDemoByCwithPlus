@@ -86,11 +86,11 @@ void OpSlL(){
     singleList1.List_Create_H(6) ;
     singleList1.List_Print() ;
     cout << "-----------" << endl ;
-    singleList1.List_Insert_H(2,56);
+    singleList1.List_InsertByLocation_H(2, 56);
     singleList1.List_Print() ;
-    singleList1.List_Insert_H(6, 90) ;
+    singleList1.List_InsertByLocation_H(6, 90) ;
     singleList1.List_Print() ;
-    singleList1.List_Insert_H(1,67) ;
+    singleList1.List_InsertByLocation_H(1, 67) ;
     singleList1.List_Print() ;
     cout << singleList1.List_GetLength() << endl ;
     cout << "-----------" << endl ;

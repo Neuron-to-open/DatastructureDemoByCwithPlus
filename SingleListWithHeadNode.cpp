@@ -181,7 +181,7 @@ bool SingleListWithHeadNode::List_LocateElem_H(int key, int &loc) {
  * @param e 插入的元素值
  * @return bool 返回true表示插入成功，返回false表示位置不合法或链表为空。
  */
-bool SingleListWithHeadNode::List_Insert_H(int i, int e) {
+bool SingleListWithHeadNode::List_InsertByLocation_H(int i, int e) {
     int j = 0;
     SingleListNode *tmp = this->LinklistNode;
     // 找到第i-1个结点 举例为i=3 则j=1 就停止了即位置2
@@ -210,7 +210,7 @@ bool SingleListWithHeadNode::List_Insert_H(int i, int e) {
  * @param data 引用参数，用于返回删除的元素值
  * @return bool 返回true表示删除成功，返回false表示位置不合法或链表为空。
  */
-bool SingleListWithHeadNode::List_Delete_H(int i, int &data) {
+bool SingleListWithHeadNode::List_DeleteByLocation_H(int i, int &data) {
     SingleListNode *tmp = this->LinklistNode;
     int j = 0;
     while (tmp != nullptr && j < i - 1) {

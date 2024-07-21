@@ -66,8 +66,8 @@ c++ 版本 ：c++11
         e. 销毁链表   --  List_Destroy()
         f. 获取指定位置元素 -- List_GetElem_H(int i, int &data)      
         g. 查找指定值的元素位置   --  List_LocateElem_H(int key, int &loc)
-        h. 在指定位置插入元素   --  List_Insert_H(int i, int e)      
-        i. 删除指定位置的元素   --  List_Delete_H(int i, int &data)
+        h. 在指定位置插入元素   --  List_InsertByLocation_H(int i, int e)      
+        i. 删除指定位置的元素   --  List_DeleteByLocation_H(int i, int &data)
         j. 求取链表长度   --  List_GetLength()
         定义的元素类型 SingleListDataElement
         默认带头结点的单链表 

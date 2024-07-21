@@ -75,7 +75,7 @@ public:
      * @return 插入成功返回true，失败返回false。
      */
     // 在链表第i个位置插入元素e
-    bool List_Insert_H(int i , int e) ;
+    bool List_InsertByLocation_H(int i , int e) ;
 
     /**
      * 从头开始删除链表中第i个位置的元素。
@@ -84,7 +84,7 @@ public:
      * @return 删除成功返回true，失败返回false。
      */
     // 删除链表第i个位置的元素
-    bool List_Delete_H(int i , int &data ) ;
+    bool List_DeleteByLocation_H(int i , int &data ) ;
 
     int List_GetLength() ; // 获取链表长度
 };
