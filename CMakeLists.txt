@@ -25,4 +25,6 @@ add_executable(All
         SequenceQueue.h
         ListQueue.cpp
         ListQueue.h
+        SingleListWithNoHead.cpp
+        SingleListWithNoHead.h
 )
