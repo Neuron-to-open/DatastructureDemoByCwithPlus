@@ -57,7 +57,7 @@ c++ 版本 ：c++11
         定义的元素类型 SequenceDataElement
 
     1.2 链表
-        A.SingleList.cpp SingleList.h
+        A.SingleListWithHeadNode.cpp SingleListWithHeadNode.h
         单链表的基本操作
         a. 初始化链表   --  List_Init()
         b. 头插法创建链表   --  List_Create_H() 
