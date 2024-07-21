@@ -44,16 +44,16 @@ c++ 版本 ：c++11
     1.1 顺序表
         SequenceList.cpp SequenceList.h
         顺序表的基本操作
-        a. 初始化赋值表   --  InitTable()
-        b. 打印输出表值   --  ShowTable()
-        c. 插入元素在表   --  InsertTable()
-        d. 删除元素在表   --  DeleteTable()
-        e. 获取位置元素   --  GetElem()
-        f. 获取元素位置   --  LocateElem()
-        g. 判断表是否空   --  IsEmpty()
-        h. 获取表的长度   --  getLength()
-        i. 销毁表的所有   --  DestroyTable()
-        j. 增大表的容量   --  addLength()
+        a. 初始化赋值表   --  Seq_Init()
+        b. 打印输出表值   --  Seq_Print()
+        c. 插入元素在表   --  Seq_Insert_Elem()
+        d. 删除元素在表   --  Seq_Delete_Elem()
+        e. 获取位置元素   --  Seq_Get_Elem()
+        f. 获取元素位置   --  Seq_Locate_Elem()
+        g. 判断表是否空   --  Seq_IsEmpty()
+        h. 获取表的长度   --  Seq_GetLength()
+        i. 销毁表的所有   --  Seq_Destroy()
+        j. 增大表的容量   --  Seq_AddLength()
         定义的元素类型 SequenceDataElement
 
     1.2 链表
@@ -68,7 +68,7 @@ c++ 版本 ：c++11
         g. 查找指定值的元素位置   --  LocateElem_H(int key, int &loc)
         h. 在指定位置插入元素   --  ListInsert_H(int i, int e)      
         i. 删除指定位置的元素   --  ListDelete_H(int i, int &data)
-        j. 求取链表长度   --  getLength()
+        j. 求取链表长度   --  Seq_GetLength()
         定义的元素类型 SingleListDataElement
         默认带头结点的单链表 
 

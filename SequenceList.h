@@ -49,7 +49,7 @@ public :
     * 只需要返回对应的数据和值，所以没有必要返回原先创建的数据
     * @return void
     */
-    void InitTable() ;
+    void Seq_Init() ;
 
     /* 输出顺序表中的所有元素 */
     /**
@@ -57,7 +57,7 @@ public :
     * 输出顺序表中元素的函数
     * @param s
      */
-    void ShowTable() ;
+    void Seq_Print() ;
 
     /* 当顺序表满时，扩大数组长度 */
     /**
@@ -65,7 +65,7 @@ public :
     * 当长度不够时，自动增加内存,使用realloc函数增大内存
     * @param s
     */
-    void addLength() ;
+    void Seq_AddLength() ;
 
     /* 返回顺序表的长度 */
     /**
@@ -74,7 +74,7 @@ public :
     * @param s
      * @return int
     */
-    int getLength() ;
+    int Seq_GetLength() ;
 
     /* 销毁顺序表，释放内存 */
     /**
@@ -84,7 +84,7 @@ public :
     * @return true
     * @return false
     */
-    bool DestroyTable() ;
+    bool Seq_Destroy() ;
 
     /* 判断顺序表是否为空 */
     /**
@@ -94,7 +94,7 @@ public :
      * @return true
     * @return false
      */
-     bool isEmpty() ;
+     bool Seq_IsEmpty() ;
 
      /**
       * @brief 定位元素在表中的位置
@@ -102,7 +102,7 @@ public :
       * @param e 待查找的元素
       * @return int 元素的位置，如果未找到返回-1
       */
-     int LocateElem(int e) ;
+     int Seq_Locate_Elem(int e) ;
 
      /**
       * @brief 获取表中指定位置的元素
@@ -111,7 +111,7 @@ public :
       * @param Elem 用于存储获取到的元素的引用
       * @return bool 获取是否成功，成功返回true，失败返回false
       */
-     bool getElem(int i , int &Elem) ;
+     bool Seq_Get_Elem(int i , int &Elem) ;
 
      /**
       * @brief 在表中插入一个元素
@@ -120,7 +120,7 @@ public :
       * @param elem 待插入的元素
       * @return bool 插入是否成功，成功返回true，失败返回false
       */
-     bool InsertTable(int i , int elem) ;
+     bool Seq_Insert_Elem(int i , int elem) ;
 
      /**
       * @brief 从表中删除指定位置的元素
@@ -129,7 +129,7 @@ public :
       * @param data 用于存储被删除元素的引用
       * @return bool 删除是否成功，成功返回true，失败返回false
       */
-     bool DeleteTable(int i , int &data) ;
+     bool Seq_Delete_Elem(int i , int &data) ;
 
      bool reverseSequenceList() ;
 };

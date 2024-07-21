@@ -43,29 +43,29 @@ using namespace std ;
 //顺序表
 void OpSeq(){
     SequenceList sequence(10) ; // 创建一个size为10顺序表的实例
-    sequence.InitTable() ;       //实例中初始化链表各种数据
-    sequence.ShowTable() ;       // 遍历
+    sequence.Seq_Init() ;       //实例中初始化链表各种数据
+    sequence.Seq_Print() ;       // 遍历
     cout << "-------------" << endl ;
-    sequence.InsertTable(6, 99) ;
-    sequence.InsertTable(1, 90) ;
-    sequence.InsertTable(4 , 88) ;
-    sequence.InsertTable(3 , 520) ;
-    sequence.ShowTable() ;       // 遍历
+    sequence.Seq_Insert_Elem(6, 99) ;
+    sequence.Seq_Insert_Elem(1, 90) ;
+    sequence.Seq_Insert_Elem(4 , 88) ;
+    sequence.Seq_Insert_Elem(3 , 520) ;
+    sequence.Seq_Print() ;       // 遍历
     cout << "-------------" << endl ;
 //
     sequence.reverseSequenceList() ;
-    sequence.ShowTable() ;       // 遍历
+    sequence.Seq_Print() ;       // 遍历
     cout << "-" << endl ;
 
-    sequence.addLength() ;
+    sequence.Seq_AddLength() ;
     cout << "-------------" << endl ;
 
     int data ;
-    sequence.DeleteTable(2 , data) ;
+    sequence.Seq_Delete_Elem(2 , data) ;
     cout << "Delete the data :" << data << endl ;
-    sequence.ShowTable() ;       // 遍历
+    sequence.Seq_Print() ;       // 遍历
     cout << "-------------" << endl ;
-    if (sequence.DestroyTable()){
+    if (sequence.Seq_Destroy()){
         cout << "Delete Success" << endl ;
     }
 }

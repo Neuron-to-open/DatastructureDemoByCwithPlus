@@ -46,7 +46,7 @@ SequenceList::SequenceList(int size) {
  * 参数：无
  * 返回值：无
  */
-void SequenceList::InitTable() {
+void SequenceList::Seq_Init() {
     /* 初始化顺序表的长度为6 */
     this->seq.length = 6;
 
@@ -71,7 +71,7 @@ void SequenceList::InitTable() {
  *
  * @note 该函数假设顺序列表已经被正确初始化，并且数组中存储的数据是合法的。
  */
-void SequenceList::ShowTable() {
+void SequenceList::Seq_Print() {
     // 遍历顺序列表中的每个元素
     for (int i = 0; i < this->seq.length; ++i) {
         // 打印每个元素到标准输出设备
@@ -92,9 +92,9 @@ void SequenceList::ShowTable() {
  * @return 如果表成功被销毁，则返回true；如果表为空，无需销毁，此时返回false。
  */
 // 销毁表，释放内存
-bool SequenceList::DestroyTable() {
+bool SequenceList::Seq_Destroy() {
     // 如果顺序表长度不为0，即表不为空，则进行销毁操作
-    if (getLength() != 0) {
+    if (Seq_GetLength() != 0) {
         // 释放顺序表头部的内存空间，即释放整个表的空间
         free(this->seq.head);
         // 表成功销毁，返回true
@@ -111,7 +111,7 @@ bool SequenceList::DestroyTable() {
 // 当序列的当前容量不足时，将容量翻倍，以容纳更多的元素。
 // 如果内存分配失败，将不进行任何操作并保持原容量不变。
 // 扩充序列的容量
-void SequenceList::addLength() {
+void SequenceList::Seq_AddLength() {
     size_t oldSize = this->seq.size;
     this->seq.size *= 2;
     cout << "New size: " << this->seq.size << endl;
@@ -131,7 +131,7 @@ void SequenceList::addLength() {
 // 获取序列的当前长度
 // 返回值：序列中元素的数量。
 // 获取序列的当前长度
-int SequenceList::getLength() {
+int SequenceList::Seq_GetLength() {
     cout << "The length of the sequence list is: " << this->seq.length << endl;
     return this->seq.length;
 }
@@ -140,8 +140,8 @@ int SequenceList::getLength() {
 // 判断序列是否为空
 // 返回值：如果序列为空，则返回true；否则返回false。
 // 判断序列是否为空
-bool SequenceList::isEmpty() {
-    if (getLength() == 0) {
+bool SequenceList::Seq_IsEmpty() {
+    if (Seq_GetLength() == 0) {
         cout << "The sequence list is empty." << endl;
         return true;
     }
@@ -157,7 +157,7 @@ bool SequenceList::isEmpty() {
  * @return 元素的位置索引，若不存在则返回-1
  */
 // 在序列中定位元素的位置，返回位置索引，若不存在返回-1
-int SequenceList::LocateElem(int e) {
+int SequenceList::Seq_Locate_Elem(int e) {
     for (int i = 0; i < this->seq.length; i++) {
         if (this->seq.head[i] == e) {
             cout << "The element " << e << " is located at index " << i + 1 << endl;
@@ -176,7 +176,7 @@ int SequenceList::LocateElem(int e) {
  * @return 是否成功获取到元素
  */
 // 获取序列中指定位置的元素，通过引用返回
-bool SequenceList::getElem(int i, int &Elem) {
+bool SequenceList::Seq_Get_Elem(int i, int &Elem) {
     if (this->seq.length == 0 || this->seq.length < i || i <= 0) {
         cout << "The index is out of range or the sequence list is empty." << endl;
         return false;
@@ -194,7 +194,7 @@ bool SequenceList::getElem(int i, int &Elem) {
  * @return 是否成功插入元素
  */
 // 在序列中插入一个元素
-bool SequenceList::InsertTable(int i, int elem) {
+bool SequenceList::Seq_Insert_Elem(int i, int elem) {
     if (this->seq.size > i && i >= 1) {
         int j = this->seq.length - 1;
         for (; j >= i - 1; --j) {
@@ -216,7 +216,7 @@ bool SequenceList::InsertTable(int i, int elem) {
  * @return 是否成功删除元素
  */
 // 从序列中删除一个元素，并通过引用返回被删除的元素
-bool SequenceList::DeleteTable(int i, int &data) {
+bool SequenceList::Seq_Delete_Elem(int i, int &data) {
     if (this->seq.length >= i && i >= 1) {
         data = this->seq.head[i - 1];
         int j = i - 1;
