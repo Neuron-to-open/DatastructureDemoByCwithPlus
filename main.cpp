@@ -74,27 +74,27 @@ void OpSeq(){
 //µ¥Á´±í
 void OpSlL(){
     SingleListWithHeadNode singleList ;
-    singleList.InitList() ;
-    singleList.CreateList_T(6) ;
-    singleList.ListPrint() ;
-    if(singleList.DestroyList()){
+    singleList.List_Init() ;
+    singleList.List_Create_T(6) ;
+    singleList.List_Print() ;
+    if(singleList.List_Destroy()){
         cout << "Having Deleting !!!" << endl ;
     }
     cout << "-----------" << endl ;
     SingleListWithHeadNode singleList1 ;
-    singleList1.InitList() ;
-    singleList1.CreateList_H(6) ;
-    singleList1.ListPrint() ;
+    singleList1.List_Init() ;
+    singleList1.List_Create_H(6) ;
+    singleList1.List_Print() ;
     cout << "-----------" << endl ;
-    singleList1.ListInsert_H(2,56);
-    singleList1.ListPrint() ;
-    singleList1.ListInsert_H(6, 90) ;
-    singleList1.ListPrint() ;
-    singleList1.ListInsert_H(1,67) ;
-    singleList1.ListPrint() ;
-    cout << singleList1.GetLength() << endl ;
+    singleList1.List_Insert_H(2,56);
+    singleList1.List_Print() ;
+    singleList1.List_Insert_H(6, 90) ;
+    singleList1.List_Print() ;
+    singleList1.List_Insert_H(1,67) ;
+    singleList1.List_Print() ;
+    cout << singleList1.List_GetLength() << endl ;
     cout << "-----------" << endl ;
-    if(singleList1.DestroyList()){
+    if(singleList1.List_Destroy()){
         cout << "Having Deleting !!!" << endl ;
     }
 }

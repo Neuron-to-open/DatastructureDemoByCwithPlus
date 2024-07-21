@@ -21,3 +21,7 @@
 174	1632	7432427116347932	CMakeFiles/All.dir/SequenceQueue.cpp.obj	b2a9cfe641ead4ce
 148	1635	7432427116078354	CMakeFiles/All.dir/ListStack.cpp.obj	e6e73683dac591a2
 10	517	7432428462965286	CMakeFiles/All.dir/SingleListWithHeadNode.cpp.obj	1c3455785e2b2f69
+61	208	7432495150916266	CMakeFiles/All.dir/SingleListWithNoHead.cpp.obj	6b2c5634295136c3
+35	615	7432495150664125	CMakeFiles/All.dir/SingleListWithHeadNode.cpp.obj	1c3455785e2b2f69
+10	733	7432495150388644	CMakeFiles/All.dir/main.cpp.obj	e9771c720adcd47c
+733	1261	7432495157637811	All.exe	eba703266a573ad3
