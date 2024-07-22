@@ -10,13 +10,18 @@ typedef struct NodeOne{
     struct NodeOne* next;
 }NodeOne;
 
-bool InitList(NodeOne *L) ;
-bool List_Create_H(NodeOne *L, int n) ;
-bool List_Create_T(NodeOne *L, int n) ;
-bool List_Insert(NodeOne *L, int i, int x) ;
-bool List_Get_Elem(NodeOne *L, int i, int &x) ;
-bool List_Del(NodeOne *L, int i) ;
-void List_Print(NodeOne *L) ;
-bool DestroyList(NodeOne *L) ;
+class SingleListWithNoHead {
+public:
+    NodeOne *head = nullptr;
+    bool List_Create_H(int n) ;
+    bool List_Create_T(int n) ;
+    bool List_Insert( int i, int x) ;
+    bool List_Get_Elem(int i, int &x) ;
+    bool List_Del(int i) ;
+    void List_Print() ;
+    bool List_DestroyList() ;
+} ;
+
+
 
 #endif //ALL_SINGLELISTWITHNOHEAD_H

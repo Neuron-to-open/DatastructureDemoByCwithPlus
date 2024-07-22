@@ -5,6 +5,7 @@
 
 #include "SequenceList.h"
 #include "SingleListWithHeadNode.h"
+#include "SingleListWithNoHead.h"
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
 #include "SequenceStack.h"
@@ -73,30 +74,35 @@ void OpSeq(){
 
 //µ¥Á´±í
 void OpSlL(){
-    SingleListWithHeadNode singleList ;
-    singleList.List_Init() ;
-    singleList.List_Create_T(6) ;
-    singleList.List_Print() ;
-    if(singleList.List_Destroy()){
-        cout << "Having Deleting !!!" << endl ;
-    }
-    cout << "-----------" << endl ;
-    SingleListWithHeadNode singleList1 ;
-    singleList1.List_Init() ;
-    singleList1.List_Create_H(6) ;
-    singleList1.List_Print() ;
-    cout << "-----------" << endl ;
-    singleList1.List_InsertByLocation_H(2, 56);
-    singleList1.List_Print() ;
-    singleList1.List_InsertByLocation_H(6, 90) ;
-    singleList1.List_Print() ;
-    singleList1.List_InsertByLocation_H(1, 67) ;
-    singleList1.List_Print() ;
-    cout << singleList1.List_GetLength() << endl ;
-    cout << "-----------" << endl ;
-    if(singleList1.List_Destroy()){
-        cout << "Having Deleting !!!" << endl ;
-    }
+    SingleListWithNoHead singleListWithNoHead ;
+    singleListWithNoHead.List_Create_T(10) ;
+    singleListWithNoHead.List_Print() ;
+    singleListWithNoHead.List_DestroyList() ;
+//    SingleListWithHeadNode singleList ;
+//    singleList.List_Init() ;
+//    singleList.List_Create_T(6) ;
+//    singleList.List_Print() ;
+//    if(singleList.List_Destroy()){
+//        cout << "Having Deleting !!!" << endl ;
+//    }
+//    cout << "-----------" << endl ;
+//    SingleListWithHeadNode singleList1 ;
+//    singleList1.List_Init() ;
+//    singleList1.List_Create_H(6) ;
+//    singleList1.List_Print() ;
+//    cout << "-----------" << endl ;
+//    singleList1.List_InsertByLocation_H(2, 56);
+//    singleList1.List_Print() ;
+//    singleList1.List_InsertByLocation_H(6, 90) ;
+//    singleList1.List_Print() ;
+//    singleList1.List_InsertByLocation_H(1, 67) ;
+//    singleList1.List_Print() ;
+//    cout << singleList1.List_GetLength() << endl ;
+//    cout << "-----------" << endl ;
+//    if(singleList1.List_Destroy()){
+//        cout << "Having Deleting !!!" << endl ;
+//    }
+
 }
 
 
