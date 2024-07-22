@@ -6,14 +6,14 @@
 #define ALL_DOUBLELINKEDLIST_H
 
 typedef int DoubleLinkedListDataElement ;
-typedef struct DNode{
+typedef struct DoubleLinkedListNode{
     DoubleLinkedListDataElement data ;
-    struct DNode *next , *prior ;
-}DNode;
+    struct DoubleLinkedListNode *next , *prior ;
+}DoubleLinkedListNode;
 
 class DoubleLinkedList {
 public:
-    DNode *DllHeadNode = new DNode; //头结点
+    DoubleLinkedListNode *DllHeadNode = new DoubleLinkedListNode; //头结点
     int length ; //链表长度
     
     /**
@@ -27,7 +27,7 @@ public:
    * 只需要返回对应的数据和值，所以没有必要返回原先创建的数据
    * @return void
    */
-    bool InitTDoubleList() ;
+    bool DoubleList_Init() ;
     
     /**
      * @brief 创建链表（头插法）
@@ -37,7 +37,7 @@ public:
      * 
      * @param n 要创建的链表中节点的数量。n大于0时，函数将创建一个包含n个节点的链表。
      */
-    void CreateList_H(int n) ;
+    void DoubleList_Create_H(int n) ;
     
     /**
      * @brief 创建链表（尾插法）
@@ -47,7 +47,7 @@ public:
      * 
      * @param n 要创建的链表中节点的数量。n大于0时，函数将创建一个包含n个节点的链表。
      */
-    void CreateList_T(int n) ;
+    void DoubleList_Create_T(int n) ;
     
     /**
      * @brief 显示链表内容
@@ -55,7 +55,7 @@ public:
      * 本函数用于显示链表中的所有节点的值。它遍历链表，并按顺序打印每个节点的值。
      * 这是一个用于调试和用户界面的函数，帮助查看链表的当前状态。
      */
-    void DisplayLink() ;
+    void DoubleList_Print() ;
 
 
     /**
@@ -65,7 +65,7 @@ public:
      *
      * @return 返回一个布尔值，指示销毁操作是否成功。具体实现中，可能返回true表示成功，或false表示失败。
      */
-    void DestroyList() ;
+    void DoubleList_Destory() ;
 
 };
 #endif //ALL_DOUBLELINKEDLIST_H

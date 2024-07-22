@@ -109,19 +109,19 @@ void OpSlL(){
 //Ë«Á´±í
 void OpDll(){
     DoubleLinkedList doubleLinkedList ;
-    if(doubleLinkedList.InitTDoubleList()){
+    if(doubleLinkedList.DoubleList_Init()){
         cout << "Create a doublelinkedlist successfully" << endl ;
     }
 
-    doubleLinkedList.CreateList_H(10) ;
-    doubleLinkedList.DisplayLink() ;
+    doubleLinkedList.DoubleList_Create_H(10) ;
+    doubleLinkedList.DoubleList_Print() ;
 
     DoubleLinkedList doubleLinkedList1 ;
-    if(doubleLinkedList1.InitTDoubleList()){
+    if(doubleLinkedList1.DoubleList_Init()){
         cout <<"Create an another doubleLinkedList successfully" << endl ;
     }
-    doubleLinkedList1.CreateList_T(10) ;
-    doubleLinkedList1.DisplayLink() ;
+    doubleLinkedList1.DoubleList_Create_T(10) ;
+    doubleLinkedList1.DoubleList_Print() ;
 }
 
 

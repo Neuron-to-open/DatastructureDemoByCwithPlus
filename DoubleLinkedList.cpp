@@ -23,12 +23,12 @@ DoubleLinkedList::DoubleLinkedList() {
  * 如果链表指针为空，则返回false；否则，设置链表头尾指针为NULL。
  * @return 初始化成功返回true，否则返回false。
  */
-bool DoubleLinkedList::InitTDoubleList() {
+bool DoubleLinkedList::DoubleList_Init() {
     if(this->DllHeadNode == nullptr){
         return false ;
     }
-    this->DllHeadNode->next = nullptr ;
-    this->DllHeadNode->prior = nullptr ;
+    this->DllHeadNode->next = this->DllHeadNode ;
+    this->DllHeadNode->prior = this->DllHeadNode ;
     cout << "The DllList has been initialized." << endl ;
     return true ;
 }
@@ -37,19 +37,31 @@ bool DoubleLinkedList::InitTDoubleList() {
  * 以链表头插入方式创建双向链表。
  * @param n 链表中节点的数量。
  */
-void DoubleLinkedList::CreateList_H(int n) {
-    DNode *tmp = this->DllHeadNode ;
+void DoubleLinkedList::DoubleList_Create_H(int n) {
+    DoubleLinkedListNode *tmp = this->DllHeadNode ;
     this->length = n ;
     int num = n ;
     int data ;
     while (num --){
-        DNode *s= new DNode  ;
-        data = rand()%100 +1 ;
-        cout << data << " " ;
-        s->data = data ;
-        s->prior = tmp ;
-        s->next = tmp->next ;
-        tmp->next = s ;
+        if (tmp == tmp->next && tmp == tmp->prior) {
+            cout << "The list is empty." << endl ;
+            DoubleLinkedListNode *s = new DoubleLinkedListNode ;
+            s->data = rand()%100 +1 ;
+            cout << s->data << " " ;
+            tmp->next = s ;
+            tmp->prior = s ;
+            s->prior = tmp ;
+            s->next = tmp ;
+        } else {
+            DoubleLinkedListNode *s= new DoubleLinkedListNode  ;
+            data = rand()%100 +1 ;
+            cout << data << " " ;
+            s->data = data ;
+            s->prior = tmp ;
+            s->next = tmp->next ;
+            tmp->next = s ;
+        }
+
     }
     cout << endl ;
     cout << "The DllList has been created by head insertion." << endl ;
@@ -59,8 +71,8 @@ void DoubleLinkedList::CreateList_H(int n) {
  * 显示链表内容。
  * 从链表头开始遍历，打印每个节点的数据。
  */
-void DoubleLinkedList::DisplayLink() {
-    DNode *tmp = this->DllHeadNode ;
+void DoubleLinkedList::DoubleList_Print() {
+    DoubleLinkedListNode *tmp = this->DllHeadNode ;
     while (tmp->next != nullptr ){
         cout << tmp->next->data << " " ;
         tmp = tmp->next ;
@@ -73,13 +85,23 @@ void DoubleLinkedList::DisplayLink() {
  * 以尾插入方式创建双向链表。
  * @param n 链表中节点的数量。
  */
-void DoubleLinkedList::CreateList_T(int n) {
+void DoubleLinkedList::DoubleList_Create_T(int n) {
     int num = n ;
     this->length = n ;
     int data = 0 ;
-    DNode *tmp = this->DllHeadNode ;
+    DoubleLinkedListNode *tmp = this->DllHeadNode ;
     while(num --){
-        DNode *s = new DNode  ;
+        if ( tmp == tmp->next && tmp == tmp->prior) {
+            cout << "The list is empty." << endl ;
+            DoubleLinkedListNode *s = new DoubleLinkedListNode ;
+            s->data = rand()%100 +1 ;
+            cout << s->data << " " ;
+            tmp->next = s ;
+            tmp->prior = s ;
+            s->prior = tmp ;
+            s->next = tmp ;
+        }
+        DoubleLinkedListNode *s = new DoubleLinkedListNode  ;
         data = rand()%100 +1 ;
         cout << data << " " ;
         s->data = data ;
@@ -99,7 +121,7 @@ void DoubleLinkedList::CreateList_T(int n) {
  *
  * @return bool 返回true，表示链表已成功销毁。本函数不涉及返回值的实际使用，主要是为了符合函数签名的要求。
  */
-void DoubleLinkedList::DestroyList() {
+void DoubleLinkedList::DoubleList_Destory() {
     // 检查链表是否为空，避免空指针解引用
     if (this->DllHeadNode == nullptr) {
         cout << "The list is empty." << endl;
@@ -107,8 +129,8 @@ void DoubleLinkedList::DestroyList() {
     }
 
     // 保存当前节点，从链表头开始遍历
-    DNode *tmp = DllHeadNode;
-    DNode *p = nullptr;
+    DoubleLinkedListNode *tmp = DllHeadNode;
+    DoubleLinkedListNode *p = nullptr;
 
     // 遍历链表直到最后一个节点
     while (tmp->next != nullptr) {
