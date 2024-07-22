@@ -101,7 +101,7 @@ void CircleSingleList::CircleSingleList_Print() {
     cout << "CircleList printed successfully!" << endl ;
 }
 
-bool CircleSingleList::DestroyList() {
+bool CircleSingleList::CircleSingleList_Destroy() {
     CirNode *p = this->CircleListHeadNode->next ; // 指向头结点的下一个节点
     CirNode *q = nullptr ; // 指向待删除节点的前驱节点
     while (p != this->CircleListHeadNode->next){ // 循环到头结点

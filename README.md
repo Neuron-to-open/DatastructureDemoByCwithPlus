@@ -96,13 +96,13 @@ c++ 版本 ：c++11
 
         D.CircleSingleList.cpp CircleSingleList.h
         循环单链表的基本操作
-        a. 初始化循环单链表   --  InitCircleList()
-        b. 头插法创建循环单链表   --  CreateCircleList_H() 
-        c. 尾插法创建循环单链表   --  CreateCircleList_T()
-        d. 打印循环单链表   --  CircleListPrint()
-        e. 销毁循环单链表   --  DestroyCircleList()
+        a. 初始化循环单链表   --  CircleSingleList_Init()
+        b. 头插法创建循环单链表   --  CircleSingleList_Create_H() 
+        c. 尾插法创建循环单链表   --  CircleSingleList_Create_T()
+        d. 打印循环单链表   --  CircleSingleList_Print()
+        e. 销毁循环单链表   --  CircleSingleList_Destroy()
 
-        D.CircleDoubleLinkList.cpp CircleDoubleLinkList.h
+        E.CircleDoubleLinkList.cpp CircleDoubleLinkList.h
 
 第二部分 : 栈、队列与数组
 

@@ -45,7 +45,7 @@ public:
      * 销毁链表。
      * @return 销毁成功返回true，失败返回false。
      */
-    bool DestroyList() ;
+    bool CircleSingleList_Destroy() ;
 
 };
 #endif //ALL_CIRCLESINGLELIST_H
