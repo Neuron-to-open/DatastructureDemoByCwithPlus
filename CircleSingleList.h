@@ -22,24 +22,24 @@ public:
      * 初始化链表。
      * @return 初始化成功返回true，失败返回false。
      */
-    bool InitList_L() ;
+    bool CircleSingleList_Init_L() ;
 
     /**
      * 使用头插法创建链表。
      * @param n 链表中元素的数量。
      */
-    void CreateList_H(int n ) ;
+    void CircleSingleList_Create_H(int n ) ;
 
     /**
      * 使用尾插法创建链表。
      * @param n 链表中元素的数量。
      */
-    void CreateList_R(int n ) ;
+    void CircleSingleList_Create_R(int n ) ;
 
     /**
      * 打印链表中的所有元素。
      */
-    void ListPrint() ;
+    void CircleSingleList_Print() ;
 
     /**
      * 销毁链表。

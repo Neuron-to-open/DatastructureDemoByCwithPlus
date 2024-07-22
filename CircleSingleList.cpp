@@ -14,7 +14,7 @@ using namespace std ;
  * 初始化循环单链表
  * @return 是否成功初始化的标志，如果链表指针为空，则初始化失败；否则，初始化成功。
  */
-bool CircleSingleList::InitList_L() {
+bool CircleSingleList::CircleSingleList_Init_L() {
     // 检查链表指针是否为空，如果为空，则初始化失败
     if (this->CircleListHeadNode == nullptr){
         cout << "Error: CircleList is nullptr!" << endl ;
@@ -32,7 +32,7 @@ bool CircleSingleList::InitList_L() {
  * 通过随机数创建循环单链表
  * @param n 链表中节点的数量
  */
-void CircleSingleList::CreateList_H(int n) {
+void CircleSingleList::CircleSingleList_Create_H(int n) {
     CirNode *tmp = this->CircleListHeadNode ; //头结点
     this->length = n ; // 设置链表长度
     int num = n ; // 初始化节点计数器
@@ -59,7 +59,7 @@ void CircleSingleList::CreateList_H(int n) {
     cout << "CircleList created successfully!" << endl ;
 }
 
-void CircleSingleList::CreateList_R(int n) {
+void CircleSingleList::CircleSingleList_Create_R(int n) {
     CirNode *tmp = this->CircleListHeadNode ; //头结点
     this->length = n ; // 设置链表长度
     int num = n ; // 初始化节点计数器
@@ -90,7 +90,7 @@ void CircleSingleList::CreateList_R(int n) {
     cout << "CircleList created successfully!" << endl ;
 }
 
-void CircleSingleList::ListPrint() {
+void CircleSingleList::CircleSingleList_Print() {
     CirNode *p = this->CircleListHeadNode->next ; // 指向头结点的下一个节点
     cout << "CircleList: " ;
     do {
