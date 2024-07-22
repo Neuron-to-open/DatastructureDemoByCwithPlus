@@ -105,6 +105,15 @@ c++ 版本 ：c++11
 
         E.CircleDoubleLinkList.cpp CircleDoubleLinkList.h
 
+        F.Static.cpp Static.h
+        静态链表
+        a. 初始化静态链表   --  StaticList_Init()
+        b. 在指定位置插入元素   --  StaticList_InsertByLocation()
+        c. 按值查找元素位置   --  StaticList_FindByValue()
+        d. 删除指定位置的元素   --  StaticList_DeleteByLocation()
+        e. 打印静态链表   --  Static_Print()
+
+
 第二部分 : 栈、队列与数组
 
     2.1 栈

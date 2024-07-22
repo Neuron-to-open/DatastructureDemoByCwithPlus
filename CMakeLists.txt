@@ -27,4 +27,6 @@ add_executable(All
         ListQueue.h
         SingleListWithNoHead.cpp
         SingleListWithNoHead.h
+        StaticList.cpp
+        StaticList.h
 )
