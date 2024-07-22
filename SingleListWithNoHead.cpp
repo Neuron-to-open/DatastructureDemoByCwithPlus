@@ -15,12 +15,12 @@ bool SingleListWithNoHead::List_Create_H( int n) {
         int random_number = rand() % 100 + 1;
         cout << random_number << " ";
         if (this->head == nullptr) {
-            this->head = new NodeOne;
+            this->head = new SingleListWithoutHeadDataElement;
             this->head->data = random_number;
             this->head->next = nullptr;
 
         }else {
-            NodeOne *p = new NodeOne;
+            SingleListWithoutHeadDataElement *p = new SingleListWithoutHeadDataElement;
             p->data = random_number;
             p->next = this->head->next;
             this->head = p ;
@@ -32,17 +32,17 @@ bool SingleListWithNoHead::List_Create_H( int n) {
 }
 
 bool SingleListWithNoHead::List_Create_T(int n) {
-    NodeOne *tail= nullptr;
+    SingleListWithoutHeadDataElement *tail= nullptr;
     while (n --) {
         int random_number = rand() % 100 + 1;
         cout << random_number << " ";
         if (this->head == nullptr) {
-            this->head = new NodeOne;
+            this->head = new SingleListWithoutHeadDataElement;
             this->head->data = random_number;
             this->head->next = nullptr;
             tail = this->head;
         }else {
-            NodeOne *p = new NodeOne;
+            SingleListWithoutHeadDataElement *p = new SingleListWithoutHeadDataElement;
             p->data = random_number;
             p->next = nullptr;
             if (tail != nullptr) {
@@ -59,7 +59,7 @@ bool SingleListWithNoHead::List_Create_T(int n) {
 }
 
 void SingleListWithNoHead::List_Print() {
-    NodeOne *p = this->head;
+    SingleListWithoutHeadDataElement *p = this->head;
     while (p != nullptr) {
         cout << p->data << " ";
         p = p->next;
@@ -69,9 +69,9 @@ void SingleListWithNoHead::List_Print() {
 
 bool SingleListWithNoHead::List_DestroyList() {
     if (this->head != nullptr) {
-        NodeOne *p = this->head;
+        SingleListWithoutHeadDataElement *p = this->head;
         while (p != nullptr) {
-            NodeOne *q = p->next;
+            SingleListWithoutHeadDataElement *q = p->next;
             delete p;
             p = q;
         }

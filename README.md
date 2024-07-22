@@ -58,7 +58,7 @@ c++ 版本 ：c++11
 
     1.2 链表
         A.SingleListWithHeadNode.cpp SingleListWithHeadNode.h
-        单链表的基本操作
+        带头结点单链表的基本操作
         a. 初始化链表   --  List_Init()
         b. 头插法创建链表   --  List_Create_H() 
         c. 尾插法创建链表   --  List_Create_T()
@@ -70,16 +70,31 @@ c++ 版本 ：c++11
         i. 删除指定位置的元素   --  List_DeleteByLocation_H(int i, int &data)
         j. 求取链表长度   --  List_GetLength()
         定义的元素类型 SingleListDataElement
-        默认带头结点的单链表 
+        
 
-        B.DoubleLinkList.cpp DoubleLinkList.h
+        B.SingleListWithNoNode.cpp SingleListWithNoNode.h
+        不带头结点单链表的基本操作
+        a. 初始化链表   --  List_Init()
+        b. 头插法创建链表   --  List_Create_H() 
+        c. 尾插法创建链表   --  List_Create_T()
+        d. 打印链表   --  List_Print()
+        e. 销毁链表   --  List_Destroy()
+        f. 获取指定位置元素 -- List_GetElem_H(int i, int &data)      
+        g. 查找指定值的元素位置   --  List_LocateElem_H(int key, int &loc)
+        h. 在指定位置插入元素   --  List_InsertByLocation_H(int i, int e)      
+        i. 删除指定位置的元素   --  List_DeleteByLocation_H(int i, int &data)
+        j. 求取链表长度   --  List_GetLength()
+        定义的元素类型 
+        
+
+        C.DoubleLinkList.cpp DoubleLinkList.h
         双链表的基本操作
         a. 初始化双链表   --  InitDLinkList()
         b. 头插法创建双链表   --  CreateDLinkList_H() 
         c. 尾插法创建双链表   --  CreateDLinkList_T()
         d. 打印双链表   --  DLinkListPrint()
 
-        C.CircleSingleList.cpp CircleSingleList.h
+        D.CircleSingleList.cpp CircleSingleList.h
         循环单链表的基本操作
         a. 初始化循环单链表   --  InitCircleList()
         b. 头插法创建循环单链表   --  CreateCircleList_H() 

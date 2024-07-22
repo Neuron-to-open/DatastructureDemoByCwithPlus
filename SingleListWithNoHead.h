@@ -5,14 +5,14 @@
 #ifndef ALL_SINGLELISTWITHNOHEAD_H
 #define ALL_SINGLELISTWITHNOHEAD_H
 
-typedef struct NodeOne{
+typedef struct SingleListWithoutHeadDataElement{
     int data;
-    struct NodeOne* next;
-}NodeOne;
+    struct SingleListWithoutHeadDataElement* next;
+}SingleListWithoutHeadDataElement;
 
 class SingleListWithNoHead {
 public:
-    NodeOne *head = nullptr;
+    SingleListWithoutHeadDataElement *head = nullptr;
     bool List_Create_H(int n) ;
     bool List_Create_T(int n) ;
     bool List_Insert( int i, int x) ;
