@@ -89,10 +89,11 @@ c++ 版本 ：c++11
 
         C.DoubleLinkList.cpp DoubleLinkList.h
         双链表的基本操作
-        a. 初始化双链表   --  InitDLinkList()
-        b. 头插法创建双链表   --  CreateDLinkList_H() 
-        c. 尾插法创建双链表   --  CreateDLinkList_T()
-        d. 打印双链表   --  DLinkListPrint()
+        a. 初始化双链表   --  DoubleList_Init()
+        b. 头插法创建双链表   --  DoubleList_Create_H() 
+        c. 尾插法创建双链表   --  DoubleList_Create_T()
+        d. 打印双链表   --  DoubleList_Print()
+        e. 销毁双链表   --  DoubleList_Destroy()
 
         D.CircleSingleList.cpp CircleSingleList.h
         循环单链表的基本操作

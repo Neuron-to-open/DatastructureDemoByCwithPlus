@@ -128,21 +128,18 @@ void DoubleLinkedList::DoubleList_Destory() {
         return ; // 链表为空，直接返回成功
     }
 
-    // 保存当前节点，从链表头开始遍历
-    DoubleLinkedListNode *tmp = DllHeadNode;
+    // 保存当前节点，从链表第一个数字开始遍历
+    DoubleLinkedListNode *tmp = DllHeadNode->next;
     DoubleLinkedListNode *p = nullptr;
 
     // 遍历链表直到最后一个节点
-    while (tmp->next != nullptr) {
+    while (tmp != this->DllHeadNode) {
         // 暂存下一节点
         p = tmp->next;
-
         // 删除当前节点，注意：这里不直接使用tmp->prev，因为函数的目的是销毁链表，
         // 而不是调整链表内部指针。如果需要在删除节点后调整剩余节点的指针，那么就需要考虑tmp->prev的更新。
         delete tmp;
-
-        // 将tmp更新为下一个待删除的节点
-        tmp = p;
+        tmp = p ;
     }
 
     // 删除最后一个节点
