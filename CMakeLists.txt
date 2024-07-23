@@ -14,7 +14,6 @@ add_executable(All
         DoubleLinkedList.cpp DoubleLinkedList.h
         CircleSingleList.cpp CircleSingleList.h
         Cluebinarytree.cpp Cluebinarytree.h
-        StackAndQueue.cpp StackAndQueue.h
         Huffman.cpp Huffman.h
         Adjacencymultiplicity.cpp Adjacencymultiplicity.h
         AdjacencyMartixGraph.cpp AdjacencyMartixGraph.h

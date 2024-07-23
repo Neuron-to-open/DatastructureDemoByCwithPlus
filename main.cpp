@@ -9,7 +9,6 @@
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
 #include "SequenceStack.h"
-#include "StackAndQueue.h"
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
 #include "Huffman.h"
@@ -123,92 +122,6 @@ void OpDll(){
     doubleLinkedList1.DoubleList_Create_T(10) ;
     doubleLinkedList1.DoubleList_Print() ;
 }
-
-
-//括号匹配问题
-bool Check(char str[] , int len){
-    StackAndQueue stackAndQueue ;
-    stackAndQueue.InitStack(stackAndQueue.stack) ;
-    for (int i = 0 ; i < len ; i ++){
-        if(str[i] == '(' || str[i] == '[' || str[i] == '{'){
-            stackAndQueue.PushStack(stackAndQueue.stack , str[i]) ;
-        }else {
-            if(stackAndQueue.EmptyStack(stackAndQueue.stack)){
-                return false ;
-            }
-            char top ;
-            stackAndQueue.PopStack(stackAndQueue.stack , top) ;
-            if((str[i] == ')' && top != '(') ||
-                (str[i] == ']' && top != '[') ||
-               ( str[i] == '}' && top != '{')){
-                return false ;
-            }
-        }
-    }
-
-    return stackAndQueue.EmptyStack(stackAndQueue.stack) ;
-
-}
-
-
-//中缀表达式转换为后缀表达式
-int getpriority(char c){
-    if ( c == '+' || c == '-'){
-        return -1 ;
-    }else {
-        return 1 ;
-    }
-}
-
-
-//s1操作数栈 s2是符号栈
-void convert(string& express, stack<char>& s1, stack<char>& s2)
-{
-    int i = 0;
-    while (express[i] != '\0')//扫描中缀表达式
-    {
-        if ('0' <= express[i] && express[i] >= '9')//如果扫描到了操作数，直接入s1
-        {
-            s1.push(express[i++]);
-        }
-        else if (express[i] == '(')//如果扫描到了左括号，直接入s2
-        {
-            s2.push(express[i++]);
-        }
-        else if (express[i] == '+' || express[i] == '-' || express[i] == '*' || express[i] == '/')//扫描到运算符进行优先级判断
-        {
-            if (s2.empty() || s2.top() == '(' || getpriority(express[i]) > getpriority(s2.top()))//如果此时S2为空或者栈顶元素为左括号，或者扫描到的运算符优先级大于栈顶运算符优先级，则入S2
-            {
-                s2.push(express[i++]);
-            }
-            else//反之优先级如果是小于等于的话，那么就要把运算符出栈然后入s1
-            {
-                char temp = s2.top();
-                s2.pop();
-                s1.push(temp);
-            }
-        }
-        else if (express[i] == ')')//最后一种情况就是扫描到了右括号，那么就把S2从栈顶到左括号的元素依次出栈入栈
-        {
-            while (s2.top() != '(')
-            {
-                char temp = s2.top();
-                s2.pop();
-                s1.push(temp);
-            }
-            //注意最后停止循环的时候S2的栈顶元素是左括号，但是不要把左括号入栈，所以直接丢掉左括号
-            s2.pop();
-            i++;//不要忘记后移
-        }
-    }
-    while (!(s2.empty()))//如果s2没有空，那么依次出s2，入s1
-    {
-        char temp = s2.top();
-        s2.pop();
-        s1.push(temp);
-    }
-}
-
 
 //二叉树的遍历:Per
 void BTT() {
