@@ -9,6 +9,7 @@
 #include "CircleSingleList.h"
 #include "DoubleLinkedList.h"
 #include "SequenceStack.h"
+#include "bracket_matcher.h"
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
 #include "Huffman.h"
@@ -123,6 +124,21 @@ void OpDll(){
     doubleLinkedList1.DoubleList_Print() ;
 }
 
+
+//¿®∫≈∆•≈‰
+void OpBracket(){
+    string express ;
+    cout << "Please input the express :" ;
+    cin >> express ;
+
+    BracketMatcher bracketMatcher ;
+    if (bracketMatcher.areBracketsBalanced(express)) {
+        cout << "The express is balanced" << endl ;
+    } else {
+        cout << "The express is not balanced" << endl ;
+    }
+}
+
 //∂˛≤Ê ˜µƒ±È¿˙:Per
 void BTT() {
     bst bstTree ;
@@ -139,6 +155,8 @@ void BTT() {
     cout << endl ;
     bstTree.PerFree(bstTree.root) ;
 }
+
+
 
 
 //œﬂÀ˜∂˛≤Ê ˜
