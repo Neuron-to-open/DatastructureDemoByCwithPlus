@@ -10,6 +10,7 @@
 #include "DoubleLinkedList.h"
 #include "SequenceStack.h"
 #include "bracket_matcher.h"
+#include "arithmetic_parser.h"
 #include "Binarytreetraversal.h"
 #include "Cluebinarytree.h"
 #include "Huffman.h"
@@ -139,6 +140,20 @@ void OpBracket(){
     }
 }
 
+void OpArithmetic(){
+    string express ;
+    cout << "Please input the express :" ;
+    getline(cin, express) ;
+
+    try {
+        ArithmeticParser parser(express) ;
+        double result = parser.parse() ;
+        cout << "The result is :" << result << endl ;
+    } catch (const char *error) {
+        cout << error << endl ;
+    }
+}
+
 //¶þ²æÊ÷µÄ±éÀú:Per
 void BTT() {
     bst bstTree ;
@@ -232,7 +247,7 @@ int main()
                 sequenceStack.Pop(data) ;
                 cout << "Pop the data :" << data << endl ;
 
-
+//                OpArithmetic() ;
                 break ;
             }
             case 4:{

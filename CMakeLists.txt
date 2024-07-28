@@ -30,4 +30,6 @@ add_executable(All
         StaticList.h
         bracket_matcher.cpp
         bracket_matcher.h
+        arithmetic_parser.cpp
+        arithmetic_parser.h
 )

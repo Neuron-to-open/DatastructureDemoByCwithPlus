@@ -22,3 +22,13 @@
 148	1635	7432427116078354	CMakeFiles/All.dir/ListStack.cpp.obj	e6e73683dac591a2
 220	1252	7433347787273148	CMakeFiles/All.dir/SingleListWithHeadNode.cpp.obj	1c3455785e2b2f69
 111	928	7433451125559118	CMakeFiles/All.dir/SingleListWithNoHead.cpp.obj	6b2c5634295136c3
+12	911	7434495337827315	CMakeFiles/All.dir/main.cpp.obj	e9771c720adcd47c
+69	914	7434495338387716	CMakeFiles/All.dir/StaticList.cpp.obj	b83b8e5eea8da3d2
+96	1054	7434495338668372	CMakeFiles/All.dir/bracket_matcher.cpp.obj	c2f1a243efdde086
+122	1055	7434495338930659	CMakeFiles/All.dir/arithmetic_parser.cpp.obj	acdb99334037a8e4
+43	1082	7434495338139002	CMakeFiles/All.dir/DoubleLinkedList.cpp.obj	ffb0d30bef38fc89
+1083	2102	7434495348530920	All.exe	d18d2d09eb76ddaa
+11	624	7434497743093028	CMakeFiles/All.dir/main.cpp.obj	e9771c720adcd47c
+625	1054	7434497749236297	All.exe	d18d2d09eb76ddaa
+17	651	7434509184430327	CMakeFiles/All.dir/main.cpp.obj	e9771c720adcd47c
+652	1093	7434509190772701	All.exe	d18d2d09eb76ddaa
