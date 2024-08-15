@@ -32,4 +32,7 @@ add_executable(All
         bracket_matcher.h
         arithmetic_parser.cpp
         arithmetic_parser.h
+        ListBinaryTree.cpp
+        ListBinaryTree.h
+        ListBinaryTree.h
 )
