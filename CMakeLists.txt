@@ -7,14 +7,11 @@ add_executable(All
         SequenceList.cpp SequenceList.h
         main.cpp
         SingleListWithHeadNode.cpp SingleListWithHeadNode.h
-        Binarytreetraversal.cpp Binarytreetraversal.h
         AvlTree.cpp AvlTree.h
         sort.cpp sort.h
         SequenceStack.cpp SequenceStack.h
         DoubleLinkedList.cpp DoubleLinkedList.h
         CircleSingleList.cpp CircleSingleList.h
-        Cluebinarytree.cpp Cluebinarytree.h
-        Huffman.cpp Huffman.h
         Adjacencymultiplicity.cpp Adjacencymultiplicity.h
         AdjacencyMartixGraph.cpp AdjacencyMartixGraph.h
         AdjacencyListGraph.cpp AdjacencyListGraph.h

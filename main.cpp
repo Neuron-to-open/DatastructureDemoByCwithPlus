@@ -11,9 +11,7 @@
 #include "SequenceStack.h"
 #include "bracket_matcher.h"
 #include "arithmetic_parser.h"
-#include "Binarytreetraversal.h"
-#include "Cluebinarytree.h"
-#include "Huffman.h"
+#include "ListBinarytree.h"
 #include "AdjacencyMartixGraph.h"
 #include "AdjacencyListGraph.h"
 #include "Adjacencymultiplicity.h"
@@ -154,41 +152,8 @@ void OpArithmetic(){
     }
 }
 
-//二叉树的遍历:Per
-void BTT() {
-    bst bstTree ;
-    int n ;
-    ElemTypeBTT s[100] = {0};
-    cout << "Enter the PerOrder String ( '#' is on behalf of null ) :  ";
-    cin >> s ;
-    bstTree.root = bstTree.PerCreateTree(s) ;
-    bstTree.PerOrder(bstTree.root) ;
-    cout << endl ;
-    bstTree.InOrder(bstTree.root) ;
-    cout << endl ;
-    bstTree.ReOrder(bstTree.root) ;
-    cout << endl ;
-    bstTree.PerFree(bstTree.root) ;
-}
 
 
-
-
-//线索二叉树
-void ClueBT(){
-    cluebinarytree cbt1 ; //创建一个二叉树的实例1
-    cout << "Please input the PreOrder string " << endl ;
-    cbt1.root = cbt1.create_ThreadTree() ;
-    cbt1.PerOrder(cbt1.root) ;
-    cout << endl ;
-
-
-    cbt1.InThread(cbt1.root) ;
-    cbt1.InOrder(cbt1.root) ;
-    cbt1.RevInorder(cbt1.root) ;
-
-    cbt1.PerFree(cbt1.root) ;
-}
 
 //void
 int main()
@@ -262,14 +227,22 @@ int main()
 //                // 中序线索二叉树
 //                ClueBT() ;
                 //哈夫曼树
-                cout << "Please input the number " << endl ;
-                int nums[10] = {0};
-                for (int i = 0 ; i < 10 ; i ++){
-                    cin >> nums[i] ;
-                }
+//                cout << "Please input the number " << endl ;
+//                int nums[10] = {0};
+//                for (int i = 0 ; i < 10 ; i ++){
+//                    cin >> nums[i] ;
+//                }
+//
+//                Huffman huffman ;
+//                huffman.CreateHuffmanTree(huffman.HT , 10 , nums) ;
+                ListBinaryTree listBinaryTree ;
+                vector<int> nums = {1, 2, 3, -1, 4, 5, 6};
+                TreeNode* LBTreeOne = listBinaryTree.CreateBinaryTreeNonRecursive(nums) ;
+                listBinaryTree.InOrderThread(LBTreeOne) ;
+                listBinaryTree.InOrderTraversal(LBTreeOne) ;
+                listBinaryTree.DestroyBinaryTree(LBTreeOne) ;
+                cout << endl ;
 
-                Huffman huffman ;
-                huffman.CreateHuffmanTree(huffman.HT , 10 , nums) ;
 
                 break;
             }
